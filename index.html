@@ -3,9 +3,31 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rachit Mangawa - System and AIML Engineer</title>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    html.dark { background-color: #0b0b0c; color: #ece8e0; }
+    html:not(.dark) { background-color: #f3f0e9; color: #121110; }
+  </style>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -13,7 +35,7 @@
     rel="stylesheet" />
 </head>
 
-<body class="bg-[#f3f0e9] text-[#121110] min-h-screen antialiased selection:bg-[#121110] selection:text-[#f3f0e9]">
+<body class="min-h-screen antialiased bg-(--bg) text-(--fg) selection:bg-(--fg) selection:text-(--bg)">
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

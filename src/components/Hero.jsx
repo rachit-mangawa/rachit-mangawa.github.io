@@ -1,4 +1,5 @@
 import React from 'react';
+import data from '../data.json';
 
 export default function Hero() {
   return (
@@ -13,10 +14,10 @@ export default function Hero() {
 
             {/* Sub-headline description */}
             <p className="he-sub">
-              Making something useful.
+              Making something useful & fun.
             </p>
 
-            {/* Action Row: Two Clean Buttons */}
+            {/* Action Row: Three Clean Buttons */}
             <div className="he-cta">
               <a className="btn btn-solid" href="#projects">
                 <span>Explore Projects</span>
@@ -25,11 +26,21 @@ export default function Hero() {
 
               <a
                 className="btn"
-                href="/resume.pdf"
+                href={data.personal.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>View Resume</span>
+                <span>GitHub</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+
+              <a
+                className="btn"
+                href={data.personal.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>LinkedIn</span>
                 <span aria-hidden="true">↗</span>
               </a>
             </div>
@@ -38,7 +49,7 @@ export default function Hero() {
 
         {/* Section Footer: Competencies Ticker */}
         <div className="he-foot" aria-label="Core Competencies">
-          <span className="he-foot-k">Python</span>
+          <span className="he-foot-a">Python</span>
           <span className="he-foot-a">PyTorch</span>
           <span className="he-foot-a">C++</span>
           <span className="he-foot-a">Go</span>

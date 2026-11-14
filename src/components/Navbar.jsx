@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import data from '../data.json';
 import { useTheme } from '../hooks/useTheme';
 
@@ -6,13 +6,24 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
   const { isDark, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   const navLinks = [
-    { label: 'About', href: '#about' },
     { label: 'Skills', href: '#skills' },
     { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
     { label: 'Open Source', href: '#opensource' },
     { label: 'Achievements', href: '#achievements' },
+    { label: 'Connect', href: '#resume' },
   ];
 
   const isScrolled = scrollProgress > 0.005 || mobileMenuOpen;
@@ -50,26 +61,6 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
 
         {/* Right CTAs & Theme Toggle */}
         <div className="nav-right">
-          <a
-            href={data.personal.github}
-            className="nav-gh"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub Profile"
-          >
-            GitHub <span aria-hidden="true">↗</span>
-          </a>
-
-          <a
-            href={data.personal.linkedin}
-            className="nav-gh"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="LinkedIn Profile"
-          >
-            LinkedIn <span aria-hidden="true">↗</span>
-          </a>
-
           {/* Theme Switcher Button */}
           <button
             type="button"
@@ -108,12 +99,12 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
             )}
           </button>
 
-          {/* Primary Resume Solid Button */}
+          {/* Primary Resume Solid Button (desktop only) */}
           <a
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-sm btn-solid hidden sm:inline-flex"
+            className="btn btn-sm btn-solid hidden md:inline-flex"
           >
             Resume
           </a>
@@ -141,34 +132,50 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Side Drawer & Backdrop */}
       {mobileMenuOpen && (
-        <div className="nav-drawer" id="mobile-nav">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.isExternal ? '_blank' : undefined}
-              rel={link.isExternal ? 'noopener noreferrer' : undefined}
-              onClick={() => setMobileMenuOpen(false)}
-              className="font-mono text-sm py-2 text-[var(--fg-2)] hover:text-[var(--fg)] border-b border-[var(--line)] last:border-none flex items-center justify-between"
-            >
-              <span>{link.label}</span>
-              {link.isExternal && <span className="text-xs opacity-70">↗</span>}
-            </a>
-          ))}
-          <div className="pt-2 flex items-center gap-3">
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-sm btn-solid w-full justify-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              View Resume ↗
-            </a>
-          </div>
-        </div>
+        <>
+          <div
+            className="nav-backdrop"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <aside className="nav-drawer" id="mobile-nav" aria-label="Mobile Navigation">
+            {/* Drawer Header */}
+            <div className="flex items-center justify-between pb-4 border-b border-(--line)">
+              <span className="font-mono text-xs font-semibold uppercase tracking-wider text-(--fg-3)">
+                Index
+              </span>
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-1 text-(--fg-2) hover:text-(--fg) transition-colors cursor-pointer"
+                aria-label="Close navigation menu"
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Clean Section Navigation Links matching web view */}
+            <nav className="flex flex-col py-2" aria-label="Sections">
+              {navLinks.map((link) => {
+                const isActive = activeSection === link.href.slice(1);
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`nav-mobile-link ${isActive ? 'is-active' : ''}`}
+                  >
+                    <span>{link.label}</span>
+                  </a>
+                );
+              })}
+            </nav>
+          </aside>
+        </>
       )}
     </header>
   );

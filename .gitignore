@@ -47,6 +47,7 @@ Thumbs.db
 # Chat Context, Specs & Session Artifacts (No context in real deployment)
 CONTEXT.md
 DESIGN.md
+PRODUCT.md
 plan.md
 scratch/
 .playwright-mcp/

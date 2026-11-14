@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rachit Mangawa</title>
+  <script>
+    var path = window.location.pathname;
+    if (path.indexOf('/rachit-mangawa') === 0) {
+      var remaining = path.replace(/^\/rachit-mangawa\/?/, '');
+      var search = window.location.search || '';
+      var hash = window.location.hash || '';
+      window.location.replace('/' + (remaining ? remaining : '') + search + hash);
+    } else {
+      window.location.replace('/' + (window.location.hash || ''));
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="/">rachit-mangawa.github.io</a>...</p>
+</body>
+</html>

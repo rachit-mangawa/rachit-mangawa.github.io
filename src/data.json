@@ -1,0 +1,149 @@
+{
+  "personal": {
+    "name": "Rachit Mangawa",
+    "email": "rachit.mangawa.work@gmail.com",
+    "role": "Systems & UI Software Engineer",
+    "tagline": "Building high-craft systems, low-latency engines & web interfaces",
+    "github": "https://github.com/rachit-mangawa",
+    "githubHandle": "rachit-mangawa",
+    "linkedin": "https://www.linkedin.com/in/rachit-mangawa/",
+    "linkedinHandle": "rachit-mangawa",
+    "leetcode": "https://leetcode.com/u/rachit-mangawa/",
+    "leetcodeHandle": "rachit-mangawa",
+    "codeforces": "https://codeforces.com/profile/i_win_again",
+    "codeforcesHandle": "i_win_again",
+    "kaggle": "https://www.kaggle.com/rachitmangawa",
+    "kaggleHandle": "rachitmangawa"
+  },
+  "ratings": {
+    "codeforces": {
+      "rank": "Specialist",
+      "rating": 1422,
+      "url": "https://codeforces.com/profile/i_win_again"
+    },
+    "leetcode": {
+      "rank": "Knight",
+      "rating": 1987,
+      "globalRank": 316,
+      "totalParticipants": 38291,
+      "topPercent": "Top 0.83%",
+      "url": "https://leetcode.com/u/rachit-mangawa/"
+    },
+    "kaggle": {
+      "url": "https://www.kaggle.com/rachitmangawa"
+    }
+  },
+  "projects": [
+    {
+      "id": "heartflow",
+      "number": "01",
+      "title": "HeartFlow OS",
+      "tagline": "Bare-Metal C99 Compiler & Edge Inference Engine",
+      "description": "AST transpiler compiling trained Scikit-Learn soft-voting ensembles into zero-malloc C99 headers (<512B stack, 8.15KB SRAM) for microcontrollers, paired with a 60 FPS Web Serial dashboard.",
+      "tech": ["C99", "FastAPI", "React 19", "PlatformIO", "Web Serial", "WebSockets"],
+      "metrics": [
+        { "label": "On-Device Latency", "value": "18.4µs" },
+        { "label": "Memory Footprint", "value": "<512B Stack" },
+        { "label": "Inference Rate", "value": "54.3k vec/s" }
+      ],
+      "homeMetric": "18.4µs latency · <512B stack",
+      "repo": "https://github.com/rachit-mangawa/HEARTFLOW_OS",
+      "live": "https://rachit-mangawa.github.io/HEARTFLOW_OS/"
+    },
+    {
+      "id": "hf-backend",
+      "number": "02",
+      "title": "HF Pluggable Gateway",
+      "tagline": "Sub-100ms Microservice Gateway & Runtime",
+      "description": "Extensible aggregation API gateway and container runtime dynamically mounting isolated subpackages (/heartflow, /semantic) under dedicated route prefixes with build-time weight prefetching.",
+      "tech": ["FastAPI", "Docker", "Python 3.11", "Uvicorn", "uv", "PyTorch"],
+      "metrics": [
+        { "label": "Cold-Start Budget", "value": "<100ms" },
+        { "label": "Routing Isolation", "value": "Registry Mapping" },
+        { "label": "Edge Security", "value": "Strict CSP & HSTS" }
+      ],
+      "homeMetric": "<100ms cold start · PyTorch",
+      "repo": "https://github.com/rachit-mangawa/hf-backend",
+      "live": "https://rachit-mangawa.github.io/hf-backend/"
+    },
+    {
+      "id": "semantic",
+      "number": "03",
+      "title": "Semantic Comment Analyzer",
+      "tagline": "Sub-15ms NLP Intent Engine",
+      "description": "High-throughput local NLP classifier delivering sub-15ms intent and entity recognition with word-level occlusion explainability inside <4GB local memory.",
+      "tech": ["Python", "FastAPI", "Sentence Transformers", "Hugging Face", "Scikit-Learn"],
+      "metrics": [
+        { "label": "CPU Latency", "value": "<15ms" },
+        { "label": "Batch Throughput", "value": "1,000+ req/s" },
+        { "label": "Memory Ceiling", "value": "<4GB RAM" }
+      ],
+      "homeMetric": "<15ms CPU · <4GB RAM",
+      "repo": "https://github.com/rachit-mangawa/Semantic-Comment-Analyze",
+      "live": "https://rachit-mangawa.github.io/Semantic-Comment-Analyze/"
+    },
+    {
+      "id": "vera-engine",
+      "number": "04",
+      "title": "Vera Engine",
+      "tagline": "High-Performance Execution Engine",
+      "description": "Core computational and execution engine built for low-latency workflow pipelines, deterministic scheduling, and memory-efficient pipeline primitives.",
+      "tech": ["Go", "Distributed Systems", "gRPC", "Protobuf", "Concurrency"],
+      "metrics": [
+        { "label": "Pipeline Throughput", "value": "Sub-ms" },
+        { "label": "Execution Model", "value": "Zero Allocation" },
+        { "label": "Architecture", "value": "Modular" }
+      ],
+      "homeMetric": "Sub-ms pipeline · Zero-alloc",
+      "repo": "https://github.com/rachit-mangawa/vera-engine"
+    }
+  ],
+  "openSource": {
+    "project": "TensorFlow Core",
+    "issueUrl": "https://github.com/tensorflow/tensorflow/issues/120578",
+    "issueNumber": "120578",
+    "prUrl": "https://github.com/tensorflow/tensorflow/pull/120944",
+    "prNumber": "120944",
+    "contribution": "Core math / calculus gradient implementation in TensorFlow C++ and Python bindings",
+    "tags": ["Python", "C++", "Calculus", "TensorFlow"]
+  },
+  "skills": [
+    {
+      "id": "languages",
+      "category": "Languages",
+      "skills": ["Python", "C++", "C", "Go", "TypeScript", "JavaScript", "Bash", "SQL"]
+    },
+    {
+      "id": "backend",
+      "category": "Backend & Distributed Systems",
+      "skills": ["FastAPI", "Go", "Docker", "PostgreSQL", "Redis", "SQLite WAL", "Uvicorn", "gRPC", "Linux"]
+    },
+    {
+      "id": "frontend",
+      "category": "Frontend & Interfaces",
+      "skills": ["React 19", "Next.js", "Tailwind CSS", "Vite", "svg-scroll-draw", "Web Serial API", "WebSockets"]
+    },
+    {
+      "id": "ai-ml",
+      "category": "AI, ML & Tooling",
+      "skills": ["PyTorch", "TensorFlow", "Scikit-Learn", "Hugging Face", "Sentence Transformers", "LangChain", "MCP", "Ollama"]
+    },
+    {
+      "id": "devops",
+      "category": "DevOps & Quality",
+      "skills": ["GitHub Actions", "Git", "PyTest", "CI/CD Pipelines", "Docker Compose", "WCAG 2.2"]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Unique Identification Authority of India (UIDAI / Aadhaar)",
+      "role": "Software Developer Intern",
+      "period": "May 2025 – July 2025",
+      "tags": ["Python", "FastAPI", "Ollama", "FAISS", "Cross-Encoder", "OpenCV", "SQLite WAL", "WebSockets"],
+      "points": [
+        "Engineered an offline OCR and hybrid retrieval system (FAISS + BM25 with cross-encoder reranking) for 12 Indian languages, keeping peak memory under 16GB on CPU-only machines.",
+        "Built an asynchronous telemetry ETL backend loading 50MB workbooks into SQLite WAL in 5–15s, indexing 4.2M+ records with row-level RBAC security."
+      ]
+    }
+  ]
+}

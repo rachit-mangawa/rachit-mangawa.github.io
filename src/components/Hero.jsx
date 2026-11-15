@@ -43,6 +43,16 @@ export default function Hero() {
                 <span>LinkedIn</span>
                 <span aria-hidden="true">↗</span>
               </a>
+
+              <a
+                className="btn"
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Resume</span>
+                <span aria-hidden="true">↗</span>
+              </a>
             </div>
           </div>
         </div>
@@ -52,12 +62,12 @@ export default function Hero() {
           <span className="he-foot-a">Python</span>
           <span className="he-foot-a">PyTorch</span>
           <span className="he-foot-a">C++</span>
-          <span className="he-foot-a">Go</span>
-          <span className="he-foot-a">FAISS</span>
-          <span className="he-foot-a">Redis</span>
           <span className="he-foot-a">FastAPI</span>
-          <span className="he-foot-a">PostgreSQL</span>
-          <span className="he-foot-a">Linux Systems</span>
+          <span className="he-foot-a">Next.js</span>
+          <span className="he-foot-a">FAISS</span>
+          <span className="he-foot-a">Ollama</span>
+          <span className="he-foot-a">Docker</span>
+          <span className="he-foot-a">Linux</span>
         </div>
       </div>
     </section>

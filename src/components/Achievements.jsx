@@ -7,9 +7,9 @@ export default function Achievements() {
       <div className="sec-head">
         <span className="label"><b>05</b> / verification</span>
         <div>
-          <h2 id="ach-title" className="h2">Competitive standing &amp; technical rankings</h2>
+          <h2 id="ach-title" className="h2">Competitive Achievements<span className="text-(--accent)">.</span></h2>
           <p className="body">
-            Top percentile competitive programming and algorithmic problem solving across global platforms.
+            Top 0.8% global LeetCode rank, Codeforces Specialist, and competitive algorithm scores.
           </p>
         </div>
       </div>
@@ -20,7 +20,7 @@ export default function Achievements() {
           href={data.personal.leetcode}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-6 rounded-xl bg-(--panel) border border-(--line) hover:border-(--line-2) transition-colors block"
+          className="p-6 rounded-xl bg-(--panel) border border-(--line) hover:border-(--line-2) focus-visible:outline-2 focus-visible:outline-(--accent) focus-visible:outline-offset-2 transition-colors block"
         >
           <div className="font-mono text-xs text-(--fg-3)">LEETCODE</div>
           <div className="text-2xl font-semibold mt-2 text-(--fg)">{data.ratings.leetcode.rank}</div>
@@ -33,7 +33,7 @@ export default function Achievements() {
           href={data.personal.codeforces}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-6 rounded-xl bg-(--panel) border border-(--line) hover:border-(--line-2) transition-colors block"
+          className="p-6 rounded-xl bg-(--panel) border border-(--line) hover:border-(--line-2) focus-visible:outline-2 focus-visible:outline-(--accent) focus-visible:outline-offset-2 transition-colors block"
         >
           <div className="font-mono text-xs text-(--fg-3)">CODEFORCES</div>
           <div className="text-2xl font-semibold mt-2 text-(--fg)">{data.ratings.codeforces.rank}</div>
@@ -46,7 +46,7 @@ export default function Achievements() {
           href={data.personal.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-6 rounded-xl bg-(--panel) border border-(--line) hover:border-(--line-2) transition-colors block"
+          className="p-6 rounded-xl bg-(--panel) border border-(--line) hover:border-(--line-2) focus-visible:outline-2 focus-visible:outline-(--accent) focus-visible:outline-offset-2 transition-colors block"
         >
           <div className="font-mono text-xs text-(--fg-3)">GITHUB</div>
           <div className="text-2xl font-semibold mt-2 text-(--fg)">Open Source</div>
@@ -59,7 +59,7 @@ export default function Achievements() {
           href={data.personal.kaggle}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-6 rounded-xl bg-(--panel) border border-(--line) hover:border-(--line-2) transition-colors block"
+          className="p-6 rounded-xl bg-(--panel) border border-(--line) hover:border-(--line-2) focus-visible:outline-2 focus-visible:outline-(--accent) focus-visible:outline-offset-2 transition-colors block"
         >
           <div className="font-mono text-xs text-(--fg-3)">KAGGLE</div>
           <div className="text-2xl font-semibold mt-2 text-(--fg)">Machine Learning</div>

@@ -23,7 +23,7 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
     { label: 'Projects', href: '#projects' },
     { label: 'Open Source', href: '#opensource' },
     { label: 'Achievements', href: '#achievements' },
-    { label: 'Connect', href: '#resume' },
+    { label: 'Connect', href: '#connect' },
   ];
 
   const isScrolled = scrollProgress > 0.005 || mobileMenuOpen;

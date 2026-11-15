@@ -16,13 +16,13 @@ export default function Connect() {
   };
 
   return (
-    <section id="resume" className="sec border-t-0! pb-14! md:pb-20!" aria-labelledby="resume-title">
+    <section id="connect" className="sec border-t-0! pb-14! md:pb-20!" aria-labelledby="connect-title">
       <div className="flex flex-col gap-10 md:gap-14">
         {/* Top Row: Giant Display Title on left, Giant Framer Arrow on right */}
         <div className="flex flex-row items-end justify-between gap-3 sm:gap-6">
           <div className="max-w-2xl text-left min-w-0">
             <h2
-              id="resume-title"
+              id="connect-title"
               className="text-left font-medium tracking-[-0.045em] leading-[0.98] text-(--fg)"
               style={{ fontSize: 'clamp(28px, 6.2vw, 96px)' }}
             >
@@ -78,8 +78,8 @@ export default function Connect() {
 
         {/* Bottom Row: Description on left, [ email | copy ] on right below arrow in same line */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pt-2">
-          <p className="body text-left text-(--fg-2) leading-relaxed max-w-xl m-0">
-            Currently open to software engineering and machine learning roles. If you&apos;re working on low-latency infrastructure, practical AI pipelines, or high-performance systems, let&apos;s talk.
+          <p className="body text-left text-(--fg-2) leading-relaxed m-0">
+            Open to software engineering, ML, and backend roles. Let&apos;s talk.
           </p>
 
           <div className="shrink-0 max-w-full">

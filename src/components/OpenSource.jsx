@@ -5,11 +5,11 @@ export default function OpenSource() {
   return (
     <section id="opensource" className="sec" aria-labelledby="os-title">
       <div className="sec-head">
-        <span className="label"><b>04</b> / open source</span>
+        <span className="label"><b>04</b> / upstream</span>
         <div>
-          <h2 id="os-title" className="h2">Contributing to industry foundations</h2>
+          <h2 id="os-title" className="h2">Open Source Contributions<span className="text-(--accent)">.</span></h2>
           <p className="body">
-            Upstream contributions to core machine learning runtimes, kernel math verifications, and global tooling.
+            Upstream gradient math and numerical accuracy fixes in TensorFlow Core.
           </p>
         </div>
       </div>

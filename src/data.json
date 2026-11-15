@@ -40,7 +40,7 @@
       "title": "HeartFlow OS",
       "tagline": "Bare-Metal C99 Compiler & Edge Inference Engine",
       "description": "AST transpiler compiling trained Scikit-Learn soft-voting ensembles into zero-malloc C99 headers (<512B stack, 8.15KB SRAM) for microcontrollers, paired with a 60 FPS Web Serial dashboard.",
-      "tech": ["C99", "FastAPI", "React 19", "PlatformIO", "Web Serial", "WebSockets"],
+      "tech": ["Python", "FastAPI", "Next.js", "Scikit-Learn", "SHAP", "Web Serial"],
       "metrics": [
         { "label": "On-Device Latency", "value": "18.4µs" },
         { "label": "Memory Footprint", "value": "<512B Stack" },
@@ -111,27 +111,27 @@
     {
       "id": "languages",
       "category": "Languages",
-      "skills": ["Python", "C++", "C", "Go", "TypeScript", "JavaScript", "Bash", "SQL"]
+      "skills": ["Python", "C++", "TypeScript", "Bash"]
     },
     {
-      "id": "backend",
-      "category": "Backend & Distributed Systems",
-      "skills": ["FastAPI", "Go", "Docker", "PostgreSQL", "Redis", "SQLite WAL", "Uvicorn", "gRPC", "Linux"]
+      "id": "genai-nlp",
+      "category": "GenAI & NLP",
+      "skills": ["Ollama", "Hugging Face"]
     },
     {
-      "id": "frontend",
-      "category": "Frontend & Interfaces",
-      "skills": ["React 19", "Next.js", "Tailwind CSS", "Vite", "svg-scroll-draw", "Web Serial API", "WebSockets"]
+      "id": "ml-cv",
+      "category": "ML & Computer Vision",
+      "skills": ["PyTorch", "TensorFlow", "Scikit-Learn", "OpenCV", "Pandas", "NumPy"]
     },
     {
-      "id": "ai-ml",
-      "category": "AI, ML & Tooling",
-      "skills": ["PyTorch", "TensorFlow", "Scikit-Learn", "Hugging Face", "Sentence Transformers", "LangChain", "MCP", "Ollama"]
+      "id": "backend-web",
+      "category": "Backend & Web",
+      "skills": ["FastAPI", "Next.js", "SQLite", "SQLAlchemy", "Plotly"]
     },
     {
-      "id": "devops",
-      "category": "DevOps & Quality",
-      "skills": ["GitHub Actions", "Git", "PyTest", "CI/CD Pipelines", "Docker Compose", "WCAG 2.2"]
+      "id": "devops-tools",
+      "category": "MLOps & Developer Tools",
+      "skills": ["Docker", "Git", "GitHub Actions", "PyTest", "Linux"]
     }
   ],
   "experience": [

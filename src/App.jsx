@@ -41,7 +41,7 @@ export default function App() {
 
           // Active section tracking
           const scrollPos = scrollY + vh * 0.35;
-          const sectionIds = ['skills', 'experience', 'projects', 'opensource', 'achievements', 'resume'];
+          const sectionIds = ['skills', 'experience', 'projects', 'opensource', 'achievements', 'connect'];
           let currentSec = '';
           for (const sId of sectionIds) {
             const el = document.getElementById(sId);
@@ -50,7 +50,7 @@ export default function App() {
             }
           }
           if (scrollY + vh >= document.documentElement.scrollHeight - 50) {
-            currentSec = 'resume';
+            currentSec = 'connect';
           }
           setActiveSection(currentSec);
 

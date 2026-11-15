@@ -5,11 +5,11 @@ export default function Experience() {
   return (
     <section id="experience" className="sec" aria-labelledby="exp-title">
       <div className="sec-head">
-        <span className="label"><b>02</b> / work history</span>
+        <span className="label"><b>02</b> / history</span>
         <div>
-          <h2 id="exp-title" className="h2">Production deployments at population scale</h2>
+          <h2 id="exp-title" className="h2">Production Experience<span className="text-(--accent)">.</span></h2>
           <p className="body">
-            Designing mission-critical infrastructure, microservices, and distributed streaming engines.
+            Offline OCR, hybrid RAG with FAISS, and high-throughput SQLite ETL pipelines.
           </p>
         </div>
       </div>

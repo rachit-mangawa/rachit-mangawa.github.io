@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rachit Mangawa - Engineering &amp; Systems Feed</title>
+    <link>https://rachit-mangawa.github.io/</link>
+    <description>Technical updates, low-latency systems, AI retrieval pipelines, and open source releases by Rachit Mangawa.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://rachit-mangawa.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>HeartFlow OS: Edge AI Telemetry &amp; C99 Transpiler</title>
+      <link>https://rachit-mangawa.github.io/HEARTFLOW_OS/</link>
+      <guid>https://github.com/rachit-mangawa/HEARTFLOW_OS</guid>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Deterministic Edge AI runtime compiling Scikit-Learn soft-voting ensembles into zero-malloc C99 headers (&lt;512B stack, 8.15KB SRAM) for microcontrollers, paired with a 60 FPS Web Serial oscillograph.</description>
+    </item>
+    
+    <item>
+      <title>Vera AI Engine: 4-Tier Resilient LLM Cascade</title>
+      <link>https://github.com/rachit-mangawa/vera-engine</link>
+      <guid>https://github.com/rachit-mangawa/vera-engine</guid>
+      <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
+      <description>High-availability AI orchestrator with a 4-tier fail-fast fallback cascade (NVIDIA NIM, Groq, Gemini, Local Qwen via llama-cpp-python with LlamaGrammar) and sub-millisecond context distillation.</description>
+    </item>
+
+    <item>
+      <title>Semantic Comment Analyzer: Sub-15ms NLP Intent Platform</title>
+      <link>https://rachit-mangawa.github.io/Semantic-Comment-Analyze/</link>
+      <guid>https://github.com/rachit-mangawa/Semantic-Comment-Analyze</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Dense vector intent classification (MiniLM-L6-v2 + L2 logistic head) delivering sub-15ms CPU latency with exact token occlusion explainability.</description>
+    </item>
+
+    <item>
+      <title>TensorFlow Core: Numerical Autodiff Limit Fix</title>
+      <link>https://github.com/tensorflow/tensorflow/pull/120944</link>
+      <guid>https://github.com/tensorflow/tensorflow/pull/120944</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Patched math_grad.py for true limit handling in tf.math.bessel_i1 autodiff at x=0 with Python and C++ unit regression tests.</description>
+    </item>
+  </channel>
+</rss>

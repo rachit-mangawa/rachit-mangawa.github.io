@@ -39,7 +39,21 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
 
       <div className="nav-in">
         {/* Brand */}
-        <a className="nav-brand" href="#top">
+        <a className="nav-brand" href="#top" aria-label={`${data.personal.name} home`}>
+          <img
+            src="/rachit-logo-black.png"
+            alt=""
+            width="22"
+            height="22"
+            className="w-5.5 h-5.5 object-contain nav-logo-light"
+          />
+          <img
+            src="/rachit-logo-white.png"
+            alt=""
+            width="22"
+            height="22"
+            className="w-5.5 h-5.5 object-contain nav-logo-dark"
+          />
           <span className="nav-word">{data.personal.githubHandle}</span>
         </a>
 
@@ -99,12 +113,12 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
             )}
           </button>
 
-          {/* Primary Resume Solid Button (desktop only) */}
+          {/* Primary Resume Solid Button */}
           <a
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-sm btn-solid hidden md:inline-flex"
+            className="btn btn-sm btn-solid inline-flex"
           >
             Resume
           </a>
@@ -143,9 +157,25 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
           <aside className="nav-drawer" id="mobile-nav" aria-label="Mobile Navigation">
             {/* Drawer Header */}
             <div className="flex items-center justify-between pb-4 border-b border-(--line)">
-              <span className="font-mono text-xs font-semibold uppercase tracking-wider text-(--fg-3)">
-                Index
-              </span>
+              <div className="flex items-center gap-2">
+                <img
+                  src="/rachit-logo-black.png"
+                  alt=""
+                  width="18"
+                  height="18"
+                  className="w-4.5 h-4.5 object-contain nav-logo-light"
+                />
+                <img
+                  src="/rachit-logo-white.png"
+                  alt=""
+                  width="18"
+                  height="18"
+                  className="w-4.5 h-4.5 object-contain nav-logo-dark"
+                />
+                <span className="font-mono text-xs font-semibold uppercase tracking-wider text-(--fg-3)">
+                  Index
+                </span>
+              </div>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}

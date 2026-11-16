@@ -2,148 +2,244 @@
   "personal": {
     "name": "Rachit Mangawa",
     "email": "rachit.mangawa.work@gmail.com",
-    "role": "Systems & UI Software Engineer",
-    "tagline": "Building high-craft systems, low-latency engines & web interfaces",
+    "role": "Software Engineer · Systems & AI",
+    "tagline": "Low-latency systems, AI retrieval pipelines, and web interfaces",
     "github": "https://github.com/rachit-mangawa",
     "githubHandle": "rachit-mangawa",
     "linkedin": "https://www.linkedin.com/in/rachit-mangawa/",
-    "linkedinHandle": "rachit-mangawa",
     "leetcode": "https://leetcode.com/u/rachit-mangawa/",
-    "leetcodeHandle": "rachit-mangawa",
     "codeforces": "https://codeforces.com/profile/i_win_again",
-    "codeforcesHandle": "i_win_again",
-    "kaggle": "https://www.kaggle.com/rachitmangawa",
-    "kaggleHandle": "rachitmangawa"
+    "kaggle": "https://www.kaggle.com/rachitmangawa"
   },
-  "ratings": {
-    "codeforces": {
-      "rank": "Specialist",
-      "rating": 1422,
-      "url": "https://codeforces.com/profile/i_win_again"
+  "achievements": [
+    {
+      "id": "codeforces-rating",
+      "platform": "Codeforces",
+      "title": "Specialist",
+      "badge": "(1422)",
+      "meta": ["Division 2 Competitor", "Peak Rating 1422"],
+      "url": "https://codeforces.com/profile/i_win_again",
+      "label": "@i_win_again"
     },
-    "leetcode": {
-      "rank": "Knight",
-      "rating": 1987,
-      "globalRank": 316,
-      "totalParticipants": 38291,
-      "topPercent": "Top 0.83%",
-      "url": "https://leetcode.com/u/rachit-mangawa/"
+    {
+      "id": "leetcode-rating",
+      "platform": "LeetCode",
+      "title": "Knight",
+      "badge": "(1987)",
+      "highlight": "Top 2.84%",
+      "meta": ["Global Rating Percentile", "Peak Rating 1987"],
+      "url": "https://leetcode.com/u/rachit-mangawa/",
+      "label": "@rachit-mangawa"
     },
-    "kaggle": {
-      "url": "https://www.kaggle.com/rachitmangawa"
+    {
+      "id": "leetcode-contest-190",
+      "platform": "LeetCode Contest",
+      "title": "Rank 316",
+      "badge": "(Biweekly 190)",
+      "highlight": "Top 0.83%",
+      "meta": ["Out of 38,291 competitors", "All 4 Solved"],
+      "url": "https://leetcode.com/contest/biweekly-contest-190/",
+      "label": "Contest Page"
     }
-  },
+  ],
   "projects": [
     {
       "id": "heartflow",
-      "number": "01",
       "title": "HeartFlow OS",
-      "tagline": "Bare-Metal C99 Compiler & Edge Inference Engine",
-      "description": "AST transpiler compiling trained Scikit-Learn soft-voting ensembles into zero-malloc C99 headers (<512B stack, 8.15KB SRAM) for microcontrollers, paired with a 60 FPS Web Serial dashboard.",
-      "tech": ["Python", "FastAPI", "Next.js", "Scikit-Learn", "SHAP", "Web Serial"],
-      "metrics": [
-        { "label": "On-Device Latency", "value": "18.4µs" },
-        { "label": "Memory Footprint", "value": "<512B Stack" },
-        { "label": "Inference Rate", "value": "54.3k vec/s" }
-      ],
+      "tagline": "Deterministic Edge AI Telemetry & C99 Transpiler",
+      "description": "IEC 62304 Class B runtime compiling Scikit-Learn soft-voting ensembles into zero-malloc C99 headers (<512B stack, 8.15KB SRAM) for microcontrollers, paired with a 60 FPS Web Serial oscillograph.",
       "homeMetric": "18.4µs latency · <512B stack",
+      "tech": [
+        "C99",
+        "Python",
+        "TypeScript",
+        "Next.js",
+        "FastAPI",
+        "Scikit-Learn",
+        "SHAP",
+        "Web Serial API",
+        "WebSockets",
+        "Docker"
+      ],
       "repo": "https://github.com/rachit-mangawa/HEARTFLOW_OS",
       "live": "https://rachit-mangawa.github.io/HEARTFLOW_OS/"
     },
     {
       "id": "hf-backend",
-      "number": "02",
       "title": "HF Pluggable Gateway",
-      "tagline": "Sub-100ms Microservice Gateway & Runtime",
-      "description": "Extensible aggregation API gateway and container runtime dynamically mounting isolated subpackages (/heartflow, /semantic) under dedicated route prefixes with build-time weight prefetching.",
-      "tech": ["FastAPI", "Docker", "Python 3.11", "Uvicorn", "uv", "PyTorch"],
-      "metrics": [
-        { "label": "Cold-Start Budget", "value": "<100ms" },
-        { "label": "Routing Isolation", "value": "Registry Mapping" },
-        { "label": "Edge Security", "value": "Strict CSP & HSTS" }
+      "tagline": "Sub-100ms Pluggable Microservice Gateway",
+      "description": "Aggregation API gateway hosting isolated Python subprojects in a single container on HF Spaces, with build-time model prefetching, streaming payload guards, and fault isolation.",
+      "homeMetric": "<100ms cold start · uv & PyTorch",
+      "tech": [
+        "FastAPI",
+        "Docker",
+        "Python 3.11",
+        "Uvicorn",
+        "uv",
+        "PyTorch"
       ],
-      "homeMetric": "<100ms cold start · PyTorch",
       "repo": "https://github.com/rachit-mangawa/hf-backend",
       "live": "https://rachit-mangawa.github.io/hf-backend/"
     },
     {
       "id": "semantic",
-      "number": "03",
       "title": "Semantic Comment Analyzer",
-      "tagline": "Sub-15ms NLP Intent Engine",
-      "description": "High-throughput local NLP classifier delivering sub-15ms intent and entity recognition with word-level occlusion explainability inside <4GB local memory.",
-      "tech": ["Python", "FastAPI", "Sentence Transformers", "Hugging Face", "Scikit-Learn"],
-      "metrics": [
-        { "label": "CPU Latency", "value": "<15ms" },
-        { "label": "Batch Throughput", "value": "1,000+ req/s" },
-        { "label": "Memory Ceiling", "value": "<4GB RAM" }
+      "tagline": "Explainable Sub-15ms NLP Intent Engine",
+      "description": "Dense vector intent classification (MiniLM-L6-v2 + L2 logistic head) delivering sub-15ms CPU latency with exact word-level token occlusion explainability and constant 45MB RAM streaming.",
+      "homeMetric": "<15ms CPU · 250+ req/s",
+      "tech": [
+        "Python 3.13",
+        "FastAPI",
+        "Sentence-Transformers",
+        "Scikit-Learn",
+        "Hugging Face",
+        "RoBERTa",
+        "Pandas",
+        "React 18"
       ],
-      "homeMetric": "<15ms CPU · <4GB RAM",
       "repo": "https://github.com/rachit-mangawa/Semantic-Comment-Analyze",
       "live": "https://rachit-mangawa.github.io/Semantic-Comment-Analyze/"
     },
     {
       "id": "vera-engine",
-      "number": "04",
-      "title": "Vera Engine",
-      "tagline": "High-Performance Execution Engine",
-      "description": "Core computational and execution engine built for low-latency workflow pipelines, deterministic scheduling, and memory-efficient pipeline primitives.",
-      "tech": ["Go", "Distributed Systems", "gRPC", "Protobuf", "Concurrency"],
-      "metrics": [
-        { "label": "Pipeline Throughput", "value": "Sub-ms" },
-        { "label": "Execution Model", "value": "Zero Allocation" },
-        { "label": "Architecture", "value": "Modular" }
+      "title": "Vera AI Engine",
+      "tagline": "Resilient 4-Tier AI Orchestrator & Cascade",
+      "description": "Deterministic AI orchestration engine with a 4-tier fail-fast fallback cascade (NVIDIA NIM → Groq → Gemini → Local Qwen via llama-cpp-python), dynamic time budgeting, and <0.001s context distillation.",
+      "homeMetric": "<0.001s distiller · 4-tier cascade",
+      "tech": [
+        "Python 3.10",
+        "FastAPI",
+        "llama-cpp-python",
+        "LlamaGrammar",
+        "Docker",
+        "Uvicorn"
       ],
-      "homeMetric": "Sub-ms pipeline · Zero-alloc",
       "repo": "https://github.com/rachit-mangawa/vera-engine"
     }
   ],
   "openSource": {
     "project": "TensorFlow Core",
+    "shortProject": "TensorFlow",
     "issueUrl": "https://github.com/tensorflow/tensorflow/issues/120578",
     "issueNumber": "120578",
     "prUrl": "https://github.com/tensorflow/tensorflow/pull/120944",
     "prNumber": "120944",
-    "contribution": "Core math / calculus gradient implementation in TensorFlow C++ and Python bindings",
-    "tags": ["Python", "C++", "Calculus", "TensorFlow"]
+    "status": "Merged",
+    "headline": "Numerical Autodiff Gradient Fix in tf.math",
+    "subhead": "tensorflow/tensorflow · Issue #120578",
+    "problem": "In tf.math.bessel_i1 autodiff, the mathematical limit at x=0 returned 1.0 instead of 0.5, causing silent numerical errors in calculus pipelines.",
+    "solution": "Patched math_grad.py with true limit handling and added comprehensive unit regression tests covering both bessel_i1 and bessel_i1e across TensorFlow Python and C++ bindings.",
+    "tags": [
+      "Python",
+      "C++",
+      "Calculus",
+      "TensorFlow",
+      "Autodiff",
+      "Numerical Precision"
+    ]
   },
   "skills": [
     {
       "id": "languages",
-      "category": "Languages",
-      "skills": ["Python", "C++", "TypeScript", "Bash"]
+      "category": "Languages & Systems",
+      "type": "compiled · scripting",
+      "skills": [
+        "Python",
+        "C++",
+        "TypeScript",
+        "SQL",
+        "Bash"
+      ]
     },
     {
-      "id": "genai-nlp",
-      "category": "GenAI & NLP",
-      "skills": ["Ollama", "Hugging Face"]
+      "id": "ml-vision",
+      "category": "Machine Learning & Vision",
+      "type": "deep learning · vision",
+      "skills": [
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-Learn",
+        "OpenCV",
+        "SHAP",
+        "NumPy",
+        "Pandas"
+      ]
     },
     {
-      "id": "ml-cv",
-      "category": "ML & Computer Vision",
-      "skills": ["PyTorch", "TensorFlow", "Scikit-Learn", "OpenCV", "Pandas", "NumPy"]
+      "id": "genai-retrieval",
+      "category": "Generative AI & Retrieval",
+      "type": "vector search · SLMs",
+      "skills": [
+        "Ollama",
+        "Hugging Face",
+        "Sentence-Transformers",
+        "FAISS",
+        "Cross-Encoders",
+        "RAG",
+        "BM25"
+      ]
     },
     {
-      "id": "backend-web",
-      "category": "Backend & Web",
-      "skills": ["FastAPI", "Next.js", "SQLite", "SQLAlchemy", "Plotly"]
+      "id": "backend-infra",
+      "category": "Backend & Infrastructure",
+      "type": "microservices · APIs",
+      "skills": [
+        "FastAPI",
+        "SQLite",
+        "Next.js",
+        "WebSockets",
+        "SQLAlchemy",
+        "Plotly Dash"
+      ]
     },
     {
       "id": "devops-tools",
-      "category": "MLOps & Developer Tools",
-      "skills": ["Docker", "Git", "GitHub Actions", "PyTest", "Linux"]
+      "category": "DevOps & Developer Tools",
+      "type": "containers · CI/CD",
+      "skills": [
+        "Docker",
+        "Linux",
+        "Git",
+        "GitHub Actions",
+        "PyTest"
+      ]
     }
   ],
   "experience": [
     {
       "company": "Unique Identification Authority of India (UIDAI / Aadhaar)",
+      "shortCompany": "UIDAI",
       "role": "Software Developer Intern",
-      "period": "May 2025 – July 2025",
-      "tags": ["Python", "FastAPI", "Ollama", "FAISS", "Cross-Encoder", "OpenCV", "SQLite WAL", "WebSockets"],
+      "shortRole": "SDE Intern",
+      "period": "June 2026 – September 2026",
+      "tags": [
+        "Python",
+        "FastAPI",
+        "FAISS",
+        "Cross-Encoder",
+        "Ollama",
+        "OpenCV",
+        "Tesseract OCR",
+        "SQLite WAL",
+        "NumPy",
+        "Pandas",
+        "WebSockets",
+        "Plotly Dash"
+      ],
       "points": [
-        "Engineered an offline OCR and hybrid retrieval system (FAISS + BM25 with cross-encoder reranking) for 12 Indian languages, keeping peak memory under 16GB on CPU-only machines.",
-        "Built an asynchronous telemetry ETL backend loading 50MB workbooks into SQLite WAL in 5–15s, indexing 4.2M+ records with row-level RBAC security."
+        "Built an air-gapped pipeline for 50MB scanned PDFs across 12 Indian languages using OpenCV cleanup, Tesseract OCR, local Ollama inference, and hybrid FAISS + BM25 retrieval with Cross-Encoder reranking.",
+        "Built an async ETL pipeline (FastAPI, NumPy, Pandas) with WebSocket progress streaming, ingesting 100K-row workbooks in 5–15s via batch upserts into SQLite WAL across 4.2M records.",
+        "Kept peak RAM under 16GB on CPU nodes by sequencing quantized models, and added row-level RBAC for 1,000+ operators using JWT-scoped queries and bcrypt."
       ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Netaji Subhas University of Technology",
+      "shortInstitution": "NSUT",
+      "degree": "B.Tech. in Computer Science & Artificial Intelligence (CSAI)",
+      "period": "2023 – 2027",
+      "details": "Focus on Systems, Low-Level Architectures, Machine Learning, and Distributed Computing. Current CGPA: 7.17."
     }
   ]
 }

@@ -1,0 +1,36 @@
+# Rachit Mangawa
+
+> Software Engineer specializing in low-latency systems, AI retrieval pipelines, and web interfaces. CSAI at Netaji Subhas University of Technology (NSUT), former Software Developer Intern at UIDAI (Aadhaar).
+
+## Key Systems & Projects
+
+- [HeartFlow OS](https://rachit-mangawa.github.io/HEARTFLOW_OS/): Deterministic edge AI telemetry system and C99 embedded transpiler. Compiles 5-model Scikit-Learn ensembles into zero-malloc C99 headers (<512B stack, 8.15KB SRAM) for microcontrollers. 18.4µs on-device inference with -76.4% INT8 SRAM reduction.
+- [HF Pluggable Gateway](https://rachit-mangawa.github.io/hf-backend/): Sub-100ms API aggregation gateway hosting isolated Python subprojects in Docker on Hugging Face Spaces.
+- [Semantic Comment Analyzer](https://rachit-mangawa.github.io/Semantic-Comment-Analyze/): Sub-15ms NLP intent classification engine using all-MiniLM-L6-v2 embeddings with exact word-level token occlusion explainability and constant ~45MB RAM streaming.
+- [Vera AI Engine](https://github.com/rachit-mangawa/vera-engine): 4-tier fail-fast AI orchestrator cascade (NVIDIA NIM -> Groq -> Gemini -> Local Qwen SLM via llama-cpp-python with strict LlamaGrammar enforcement) for the magicpin Vera AI Challenge.
+
+## Upstream Open Source
+
+- [TensorFlow Core](https://github.com/tensorflow/tensorflow/pull/120944): Numerical autodiff gradient fix in tf.math.bessel_i1 at x=0 (Merged, PR #120944, Issue #120578).
+
+## Competitive Standing
+
+- LeetCode: Knight rating 1987 (Top 2.84% globally); Global Rank 316 of 38,291 (Top 0.83%) in Biweekly Contest 190.
+- Codeforces: Specialist rating 1422 (Division 2 competitor).
+
+## Technical Stack
+
+- Languages: Python, C++, TypeScript, SQL, Bash
+- Machine Learning & Vision: PyTorch, TensorFlow, Scikit-Learn, OpenCV, SHAP, NumPy, Pandas
+- Generative AI & Retrieval: Ollama, Hugging Face, Sentence-Transformers, FAISS, Cross-Encoders, RAG, BM25
+- Backend & Infrastructure: FastAPI, SQLite WAL, Next.js, WebSockets, SQLAlchemy, Plotly Dash
+- DevOps & Tools: Docker, Linux, Git, GitHub Actions, PyTest
+
+## Contact & Links
+
+- Portfolio: https://rachit-mangawa.github.io/
+- Email: rachit.mangawa.work@gmail.com
+- GitHub: https://github.com/rachit-mangawa
+- LinkedIn: https://www.linkedin.com/in/rachit-mangawa/
+- LeetCode: https://leetcode.com/u/rachit-mangawa/
+- Codeforces: https://codeforces.com/profile/i_win_again

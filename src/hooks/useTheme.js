@@ -21,12 +21,16 @@ export function useTheme() {
       root.setAttribute('data-theme', 'dark');
       try {
         localStorage.setItem('theme', 'dark');
+        const icon = document.querySelector('link[rel="icon"]:not([media])');
+        if (icon) icon.setAttribute('href', '/rachit-logo-white.png');
       } catch {}
     } else {
       root.classList.remove('dark');
       root.setAttribute('data-theme', 'light');
       try {
         localStorage.setItem('theme', 'light');
+        const icon = document.querySelector('link[rel="icon"]:not([media])');
+        if (icon) icon.setAttribute('href', '/rachit-logo-black.png');
       } catch {}
     }
   }, [isDark]);

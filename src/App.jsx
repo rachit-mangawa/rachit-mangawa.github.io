@@ -10,7 +10,6 @@ import Connect from './components/Connect';
 import Footer from './components/Footer';
 
 export default function App() {
-  const [heroProgress, setHeroProgress] = useState(0);
   const [docProgress, setDocProgress] = useState(0);
   const [activeSection, setActiveSection] = useState('');
 
@@ -29,10 +28,6 @@ export default function App() {
         window.requestAnimationFrame(() => {
           const scrollY = window.scrollY;
           const vh = window.innerHeight;
-
-          // Hero scroll distance
-          const heroP = Math.min(1, Math.max(0, scrollY / vh));
-          setHeroProgress(heroP);
 
           // Full document progress
           const totalHeight = document.documentElement.scrollHeight - vh;
@@ -73,7 +68,7 @@ export default function App() {
 
       {/* Main Content Area */}
       <main>
-        <Hero scrollProgress={heroProgress} />
+        <Hero />
         <Skills />
         <Experience />
         <Projects />

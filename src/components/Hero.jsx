@@ -7,14 +7,15 @@ export default function Hero() {
       <div className="he-pin">
         <div className="he-in">
           <div className="he-copy">
+
             {/* Main Headline: Rachit Mangawa */}
             <h1 className="he-title">
-              <span>Rachit Mangawa</span>
+              <span>{data.personal.name}</span>
             </h1>
 
             {/* Sub-headline description */}
             <p className="he-sub">
-              Making something useful & fun.
+              {data.personal.tagline}.
             </p>
 
             {/* Action Row: Three Clean Buttons */}
@@ -31,7 +32,6 @@ export default function Hero() {
                 rel="noopener noreferrer"
               >
                 <span>GitHub</span>
-                <span aria-hidden="true">↗</span>
               </a>
 
               <a
@@ -41,27 +41,18 @@ export default function Hero() {
                 rel="noopener noreferrer"
               >
                 <span>LinkedIn</span>
-                <span aria-hidden="true">↗</span>
-              </a>
-
-              <a
-                className="btn"
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>Resume</span>
-                <span aria-hidden="true">↗</span>
               </a>
             </div>
           </div>
         </div>
 
-        {/* Section Footer: Competencies Ticker */}
-        <div className="he-foot" aria-label="Core Competencies">
+        {/* Section Footer: Core Skills */}
+        <div className="he-foot" aria-label="Core Skills">
           <span className="he-foot-a">Python</span>
-          <span className="he-foot-a">PyTorch</span>
           <span className="he-foot-a">C++</span>
+          <span className="he-foot-a">TypeScript</span>
+          <span className="he-foot-a">SQL</span>
+          <span className="he-foot-a">PyTorch</span>
           <span className="he-foot-a">FastAPI</span>
           <span className="he-foot-a">Next.js</span>
           <span className="he-foot-a">FAISS</span>

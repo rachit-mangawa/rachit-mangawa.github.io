@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../data.json';
+import { trackEvent } from '../utils/analytics';
 
 export default function Footer() {
   return (
@@ -63,6 +64,7 @@ export default function Footer() {
         <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-(--fg-2)">
           <a
             href="/resume.pdf"
+            onClick={() => trackEvent('resume_download', { location: 'footer' })}
             className="inline-flex items-center py-1.5 px-2 hover:text-(--fg) hover:underline transition-colors"
             aria-label="resume.pdf document"
           >

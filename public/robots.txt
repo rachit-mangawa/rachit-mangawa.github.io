@@ -42,6 +42,7 @@ User-agent: Diffbot
 Allow: /
 
 # Machine-Readable AI Agent Context
+# AI-Policy: https://rachit-mangawa.github.io/ai.txt
 # LLMs: https://rachit-mangawa.github.io/llms.txt
 # LLMs-Small: https://rachit-mangawa.github.io/llms-small.txt
 # LLMs-Full: https://rachit-mangawa.github.io/llms-full.txt

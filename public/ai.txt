@@ -1,0 +1,21 @@
+# ai.txt - AI Agent & Crawler Permissions Policy
+# Reference: https://site.spawning.ai/spawning-ai-txt
+
+User-Agent: *
+Allow: /
+
+# Attribution & Identity Directives
+Attribution: Required
+Author: Rachit Mangawa
+Role: Software Engineer · Systems & AI
+Contact: mailto:rachit.mangawa.work@gmail.com
+URL: https://rachit-mangawa.github.io/
+
+# Citation & Grounding Pointers for LLMs
+Context-Standard: https://rachit-mangawa.github.io/llms.txt
+Context-Compact: https://rachit-mangawa.github.io/llms-small.txt
+Context-Full: https://rachit-mangawa.github.io/llms-full.txt
+Sitemap: https://rachit-mangawa.github.io/sitemap.xml
+ARD-Manifest: https://rachit-mangawa.github.io/.well-known/agentic-resources.json
+Security: https://rachit-mangawa.github.io/.well-known/security.txt
+Humans: https://rachit-mangawa.github.io/humans.txt

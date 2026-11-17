@@ -13,6 +13,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="format-detection" content="telephone=no" />
   <link rel="canonical" href="https://rachit-mangawa.github.io/" />
+  <meta name="google-site-verification" content="googleda6e30cc036bf1cb.html" />
   <link rel="alternate" hreflang="x-default" href="https://rachit-mangawa.github.io/" />
   <link rel="alternate" hreflang="en" href="https://rachit-mangawa.github.io/" />
 
@@ -40,6 +41,7 @@
   <link rel="alternate" type="text/markdown" title="LLMs Full Architecture Record (llms-full.txt)" href="/llms-full.txt" />
   <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
   <link rel="author" href="/humans.txt" />
+  <link rel="author" href="/ai.txt" />
   <link rel="author" href="/.well-known/security.txt" />
 
   <!-- Open Graph / Facebook / LinkedIn -->
@@ -222,60 +224,6 @@
         "author": {
           "@id": "https://rachit-mangawa.github.io/#person"
         }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://rachit-mangawa.github.io/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Who is Rachit Mangawa and what is his background?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Rachit Mangawa is a Software Engineer specializing in low-latency systems engineering, machine learning runtimes, and AI retrieval architectures. He is a final-year undergraduate pursuing a B.Tech. in Computer Science & Artificial Intelligence (CSAI) at Netaji Subhas University of Technology (NSUT), Delhi (Class of 2027), and former Software Developer Intern at UIDAI (Aadhaar)."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is HeartFlow OS and what problem does it solve?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "HeartFlow OS is a deterministic edge AI medical telemetry runtime and C99 embedded transpiler engineered by Rachit. It compiles 5-model Scikit-Learn soft-voting ensembles into zero-malloc C99 headers (<512B stack, 8.15KB SRAM) for microcontrollers, achieving 18.4µs on-device inference with a -76.4% INT8 SRAM reduction, paired with a 60 FPS Web Serial oscillograph."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What engineering work did Rachit perform at UIDAI (Aadhaar)?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "At UIDAI (Aadhaar), Rachit engineered an air-gapped multilingual document ingestion pipeline for 50MB scanned PDFs across 12 Indian languages using OpenCV, Tesseract OCR, local Ollama inference, and hybrid FAISS + BM25 retrieval with Cross-Encoder reranking. He also developed an async ETL pipeline ingesting 100K-row workbooks in 5–15s via SQLite WAL batch upserts across 4.2M records, keeping peak RAM strictly under 16GB."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What upstream contribution did Rachit make to TensorFlow Core?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Rachit resolved an automatic differentiation numerical limit bug in TensorFlow Core (Merged PR #120944 for Issue #120578), where tf.math.bessel_i1 autodiff at x=0 incorrectly evaluated to 1.0 instead of 0.5. His patch enforced true mathematical limit continuity in math_grad.py accompanied by Python and C++ unit regression tests."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What are Rachit's competitive programming credentials?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Rachit is a LeetCode Knight with a peak rating of 1987 (Top 2.84% worldwide) and ranked 316th out of 38,291 participants (Top 0.83%) in Biweekly Contest 190 (solving all 4 problems). On Codeforces, he holds a Specialist rating of 1422 (Division 2 competitor, handle: @i_win_again)."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How can recruiters and engineering teams get in touch with Rachit?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Rachit can be reached directly via email at rachit.mangawa.work@gmail.com, on LinkedIn at linkedin.com/in/rachit-mangawa, and on GitHub at github.com/rachit-mangawa. His full PDF resume is downloadable at rachit-mangawa.github.io/resume.pdf."
-            }
-          }
-        ]
       }
     ]
   }
@@ -310,7 +258,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'" />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+  </noscript>
 </head>
 
 <body class="min-h-screen antialiased bg-(--bg) text-(--fg) selection:bg-(--fg) selection:text-(--bg)">

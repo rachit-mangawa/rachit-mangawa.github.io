@@ -33,15 +33,18 @@ export default function Experience() {
                 <div className="mb-4">
                   <div className="flex items-center gap-3">
                     <div className="p-1 rounded-md bg-(--panel) border border-(--line-2) shrink-0 flex items-center justify-center">
-                      <img
-                        src="/aadhaar_logo.png"
-                        alt="Aadhaar UIDAI official emblem"
-                        width="32"
-                        height="32"
-                        loading="lazy"
-                        decoding="async"
-                        className="h-7 w-7 sm:h-8 sm:w-8 object-contain rounded-xs"
-                      />
+                      <picture>
+                        <source srcSet="/aadhaar_logo.webp" type="image/webp" />
+                        <img
+                          src="/aadhaar_logo.png"
+                          alt="Aadhaar UIDAI official emblem"
+                          width="32"
+                          height="32"
+                          loading="lazy"
+                          decoding="async"
+                          className="h-7 w-7 sm:h-8 sm:w-8 object-contain rounded-xs"
+                        />
+                      </picture>
                     </div>
                     <div>
                       <h3 className="text-xl sm:text-2xl font-medium text-(--fg) tracking-tight">{exp.role}</h3>

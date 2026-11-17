@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import data from '../data.json';
 import { useTheme } from '../hooks/useTheme';
+import { trackEvent } from '../utils/analytics';
 
 export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
   const { isDark, toggleTheme } = useTheme();
@@ -23,7 +24,6 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
     { label: 'Projects', href: '#projects' },
     { label: 'Open Source', href: '#opensource' },
     { label: 'Achievements', href: '#achievements' },
-    { label: 'FAQ', href: '#faq' },
     { label: 'Connect', href: '#connect' },
   ];
 
@@ -41,20 +41,26 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
       <div className="nav-in">
         {/* Brand */}
         <a className="nav-brand" href="#top" aria-label={`${data.personal.name} home`}>
-          <img
-            src="/rachit-logo-black.png"
-            alt=""
-            width="22"
-            height="22"
-            className="w-5.5 h-5.5 object-contain nav-logo-light"
-          />
-          <img
-            src="/rachit-logo-white.png"
-            alt=""
-            width="22"
-            height="22"
-            className="w-5.5 h-5.5 object-contain nav-logo-dark"
-          />
+          <picture className="nav-logo-light">
+            <source srcSet="/rachit-logo-black.webp" type="image/webp" />
+            <img
+              src="/rachit-logo-black.png"
+              alt=""
+              width="22"
+              height="22"
+              className="w-5.5 h-5.5 object-contain"
+            />
+          </picture>
+          <picture className="nav-logo-dark">
+            <source srcSet="/rachit-logo-white.webp" type="image/webp" />
+            <img
+              src="/rachit-logo-white.png"
+              alt=""
+              width="22"
+              height="22"
+              className="w-5.5 h-5.5 object-contain"
+            />
+          </picture>
           <span className="nav-word">{data.personal.githubHandle}</span>
         </a>
 
@@ -119,6 +125,7 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent('resume_download', { location: 'navbar' })}
             className="btn btn-sm btn-solid inline-flex"
           >
             Resume
@@ -159,20 +166,26 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
             {/* Drawer Header */}
             <div className="flex items-center justify-between pb-4 border-b border-(--line)">
               <div className="flex items-center gap-2">
-                <img
-                  src="/rachit-logo-black.png"
-                  alt=""
-                  width="18"
-                  height="18"
-                  className="w-4.5 h-4.5 object-contain nav-logo-light"
-                />
-                <img
-                  src="/rachit-logo-white.png"
-                  alt=""
-                  width="18"
-                  height="18"
-                  className="w-4.5 h-4.5 object-contain nav-logo-dark"
-                />
+                <picture className="nav-logo-light">
+                  <source srcSet="/rachit-logo-black.webp" type="image/webp" />
+                  <img
+                    src="/rachit-logo-black.png"
+                    alt=""
+                    width="18"
+                    height="18"
+                    className="w-4.5 h-4.5 object-contain"
+                  />
+                </picture>
+                <picture className="nav-logo-dark">
+                  <source srcSet="/rachit-logo-white.webp" type="image/webp" />
+                  <img
+                    src="/rachit-logo-white.png"
+                    alt=""
+                    width="18"
+                    height="18"
+                    className="w-4.5 h-4.5 object-contain"
+                  />
+                </picture>
                 <span className="font-mono text-xs font-semibold uppercase tracking-wider text-(--fg-3)">
                   Index
                 </span>

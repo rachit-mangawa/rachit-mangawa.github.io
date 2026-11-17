@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import data from '../data.json';
+import { trackEvent } from '../utils/analytics';
 
 export default function Connect() {
   const [copied, setCopied] = useState(false);
@@ -9,6 +10,7 @@ export default function Connect() {
       navigator.clipboard.writeText(data.personal.email)
         .then(() => {
           setCopied(true);
+          trackEvent('copy_email');
           setTimeout(() => setCopied(false), 2000);
         })
         .catch(() => { });
@@ -37,6 +39,7 @@ export default function Connect() {
           <div className="shrink-0 self-end">
             <a
               href={`mailto:${data.personal.email}`}
+              onClick={() => trackEvent('contact_click', { method: 'mailto' })}
               aria-label={`Send email to ${data.personal.email}`}
               title="Open mail client"
               className="arrow-swap"

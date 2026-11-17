@@ -6,7 +6,6 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import OpenSource from './components/OpenSource';
 import Achievements from './components/Achievements';
-import FAQ from './components/FAQ';
 import Connect from './components/Connect';
 import Footer from './components/Footer';
 
@@ -37,7 +36,7 @@ export default function App() {
 
           // Active section tracking
           const scrollPos = scrollY + vh * 0.35;
-          const sectionIds = ['skills', 'experience', 'projects', 'opensource', 'achievements', 'faq', 'connect'];
+          const sectionIds = ['skills', 'experience', 'projects', 'opensource', 'achievements', 'connect'];
           let currentSec = '';
           for (const sId of sectionIds) {
             const el = document.getElementById(sId);
@@ -83,7 +82,6 @@ export default function App() {
         <Projects />
         <OpenSource />
         <Achievements />
-        <FAQ />
         <Connect />
       </main>
 

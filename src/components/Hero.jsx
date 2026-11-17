@@ -13,9 +13,9 @@ export default function Hero() {
               <span>{data.personal.name}</span>
             </h1>
 
-            {/* Direct-Answer Bio Block (AEO / GEO & Human Summary) */}
+            {/* Sub-headline Tagline */}
             <p className="he-sub">
-              Software Engineer specializing in low-latency systems, AI retrieval pipelines, and web interfaces. Final-year CSAI student at Netaji Subhas University of Technology (NSUT), former Software Developer Intern at UIDAI (Aadhaar), and LeetCode Knight.
+              {data.personal.tagline}.
             </p>
 
             {/* Action Row: Three Clean Buttons */}

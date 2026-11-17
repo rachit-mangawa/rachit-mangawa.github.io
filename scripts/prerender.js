@@ -37,6 +37,22 @@ async function prerender() {
   }
 
   indexHtml = indexHtml.replace(rootRegex, `<div id="root">${appHtml}</div>`);
+
+  // Inline built CSS to completely eliminate render-blocking stylesheet network requests
+  const assetsDir = path.join(rootDir, 'dist', 'assets');
+  if (fs.existsSync(assetsDir)) {
+    const cssFiles = fs.readdirSync(assetsDir).filter((f) => f.endsWith('.css'));
+    for (const cssFile of cssFiles) {
+      const cssPath = path.join(assetsDir, cssFile);
+      const cssContent = fs.readFileSync(cssPath, 'utf8');
+      const cssLinkRegex = new RegExp(`<link[^>]+href="[^"]*${cssFile}"[^>]*>`, 'g');
+      if (cssLinkRegex.test(indexHtml)) {
+        indexHtml = indexHtml.replace(cssLinkRegex, `<style>${cssContent}</style>`);
+        console.log(`Inlined ${cssFile} (${(cssContent.length / 1024).toFixed(1)} KB) directly into <head> to eliminate render-blocking CSS.`);
+      }
+    }
+  }
+
   fs.writeFileSync(distHtmlPath, indexHtml, 'utf8');
   console.log(`Successfully pre-rendered dist/index.html (${appHtml.length} characters of HTML injected).`);
 

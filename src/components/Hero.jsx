@@ -13,6 +13,7 @@ export default function Hero() {
               <span>{data.personal.name}</span>
             </h1>
 
+
             {/* Sub-headline Tagline */}
             <p className="he-sub">
               {data.personal.tagline}.

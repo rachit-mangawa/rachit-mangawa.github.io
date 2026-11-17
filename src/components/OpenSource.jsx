@@ -9,7 +9,7 @@ export default function OpenSource() {
     <section id="opensource" className="sec" aria-labelledby="os-title">
       <div className="sec-head mb-0!">
         {/* Left Column: Monospace Category Coordinate */}
-        <span className="label"><b>04</b> / upstream</span>
+        <span className="label"><b>03</b> / upstream</span>
 
         {/* Right Column: Title, Subtitle, and Contribution Registry */}
         <div>

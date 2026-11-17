@@ -19,10 +19,10 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { label: 'Skills', href: '#skills' },
     { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
     { label: 'Open Source', href: '#opensource' },
+    { label: 'Skills', href: '#skills' },
     { label: 'Achievements', href: '#achievements' },
     { label: 'Connect', href: '#connect' },
   ];

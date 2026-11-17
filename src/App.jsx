@@ -36,7 +36,7 @@ export default function App() {
 
           // Active section tracking
           const scrollPos = scrollY + vh * 0.35;
-          const sectionIds = ['skills', 'experience', 'projects', 'opensource', 'achievements', 'connect'];
+          const sectionIds = ['experience', 'projects', 'opensource', 'skills', 'achievements', 'connect'];
           let currentSec = '';
           for (const sId of sectionIds) {
             const el = document.getElementById(sId);
@@ -77,10 +77,10 @@ export default function App() {
       {/* Main Content Area */}
       <main id="main-content">
         <Hero />
-        <Skills />
         <Experience />
         <Projects />
         <OpenSource />
+        <Skills />
         <Achievements />
         <Connect />
       </main>

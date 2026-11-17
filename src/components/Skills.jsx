@@ -6,7 +6,7 @@ export default function Skills() {
     <section id="skills" className="sec" aria-labelledby="skills-title">
       <div className="sec-head mb-0!">
         {/* Left Column: Monospace Category Coordinate */}
-        <span className="label"><b>01</b> / stack</span>
+        <span className="label"><b>04</b> / stack</span>
 
         {/* Right Column: Title, Subtitle, and Skills Stack aligned flush */}
         <div>

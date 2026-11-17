@@ -6,7 +6,7 @@ export default function Projects() {
     <section id="projects" className="sec" aria-labelledby="proj-title">
       <div className="sec-head mb-0!">
         {/* Left Column: Monospace Category Coordinate */}
-        <span className="label"><b>03</b> / systems</span>
+        <span className="label"><b>02</b> / systems</span>
 
         {/* Right Column: Title, Subtitle, and Projects Registry Table */}
         <div>

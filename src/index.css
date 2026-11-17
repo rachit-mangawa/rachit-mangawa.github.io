@@ -43,15 +43,30 @@
   html {
     transition: background-color 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
       color 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-2) transparent;
   }
 
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
-    display: none;
-    width: 0;
-    height: 0;
+    width: 8px;
+    height: 8px;
+  }
+
+  html::-webkit-scrollbar-track,
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  html::-webkit-scrollbar-thumb,
+  body::-webkit-scrollbar-thumb {
+    background: var(--line-2);
+    border-radius: 9999px;
+  }
+
+  html::-webkit-scrollbar-thumb:hover,
+  body::-webkit-scrollbar-thumb:hover {
+    background: var(--fg-3);
   }
 
   body {
@@ -61,8 +76,6 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
   }
 
   code,
@@ -486,9 +499,10 @@ html.dark .nav-logo-light,
 }
 
 .btn-sm {
-  height: 32px;
-  padding: 0 12px;
-  font-size: 10.5px;
+  height: 40px;
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 11px;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -557,13 +571,13 @@ html.dark .nav-logo-light,
 }
 
 .he-sub {
-  max-width: 50ch;
+  max-width: 54ch;
   color: var(--fg-2);
-  margin: 20px auto 0;
-  font-size: clamp(20px, 2.2vw, 28px);
+  margin: 16px auto 0;
+  font-size: clamp(22px, 1.15vw, 17px);
   font-weight: 400;
-  line-height: 1.4;
-  letter-spacing: -0.015em;
+  line-height: 1.55;
+  letter-spacing: -0.008em;
   text-align: center;
   text-wrap: pretty;
 }

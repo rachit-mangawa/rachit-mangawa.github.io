@@ -1,24 +1,28 @@
 # Rachit Mangawa
 
-> Software Engineer specializing in low-latency systems, AI retrieval pipelines, and web interfaces. CSAI at Netaji Subhas University of Technology (NSUT), former Software Developer Intern at UIDAI (Aadhaar).
+> Software Engineer specializing in low-latency systems, AI retrieval pipelines, and web interfaces. CSAI at Netaji Subhas University of Technology (NSUT), former Software Developer Intern at UIDAI (Aadhaar). LeetCode Knight (1987, Top 2.84%), Codeforces Specialist (1422), TensorFlow Core upstream contributor.
 
-## Key Systems & Projects
+## Flagship Systems & Projects
 
-- [HeartFlow OS](https://rachit-mangawa.github.io/HEARTFLOW_OS/): Deterministic edge AI telemetry system and C99 embedded transpiler. Compiles 5-model Scikit-Learn ensembles into zero-malloc C99 headers (<512B stack, 8.15KB SRAM) for microcontrollers. 18.4µs on-device inference with -76.4% INT8 SRAM reduction.
-- [HF Pluggable Gateway](https://rachit-mangawa.github.io/hf-backend/): Sub-100ms API aggregation gateway hosting isolated Python subprojects in Docker on Hugging Face Spaces.
-- [Semantic Comment Analyzer](https://rachit-mangawa.github.io/Semantic-Comment-Analyze/): Sub-15ms NLP intent classification engine using all-MiniLM-L6-v2 embeddings with exact word-level token occlusion explainability and constant ~45MB RAM streaming.
-- [Vera AI Engine](https://github.com/rachit-mangawa/vera-engine): 4-tier fail-fast AI orchestrator cascade (NVIDIA NIM -> Groq -> Gemini -> Local Qwen SLM via llama-cpp-python with strict LlamaGrammar enforcement) for the magicpin Vera AI Challenge.
+- [HeartFlow OS](https://rachit-mangawa.github.io/HEARTFLOW_OS/): Deterministic edge AI telemetry system and C99 embedded transpiler. Compiles 5-model Scikit-Learn soft-voting ensembles into zero-malloc C99 headers (<512B stack, 8.15KB SRAM) for microcontrollers. Delivers 18.4µs on-device inference with -76.4% INT8 SRAM reduction.
+- [HF Pluggable Gateway](https://rachit-mangawa.github.io/hf-backend/): Sub-100ms API aggregation gateway hosting isolated Python subprojects in Docker on Hugging Face Spaces with build-time model prefetching and fault isolation.
+- [Semantic Comment Analyzer](https://rachit-mangawa.github.io/Semantic-Comment-Analyze/): Dense vector intent classification engine (all-MiniLM-L6-v2 + L2 logistic head) delivering sub-15ms CPU latency with exact word-level token occlusion explainability and constant 45MB RAM streaming.
+- [Vera AI Engine](https://github.com/rachit-mangawa/vera-engine): 4-tier fail-fast AI orchestrator cascade (NVIDIA NIM -> Groq -> Gemini -> Local Qwen SLM via llama-cpp-python with strict LlamaGrammar enforcement) with sub-millisecond context distillation for the magicpin Vera AI Challenge.
 
 ## Upstream Open Source
 
-- [TensorFlow Core](https://github.com/tensorflow/tensorflow/pull/120944): Numerical autodiff gradient fix in tf.math.bessel_i1 at x=0 (Merged, PR #120944, Issue #120578).
+- [TensorFlow Core](https://github.com/tensorflow/tensorflow/pull/120944): Numerical autodiff gradient limit fix in tf.math.bessel_i1 at x=0 (Merged PR #120944, Issue #120578) with unit regression tests covering both bessel_i1 and bessel_i1e across TensorFlow Python and C++ bindings.
 
-## Competitive Standing
+## Professional Experience
 
-- LeetCode: Knight rating 1987 (Top 2.84% globally); Global Rank 316 of 38,291 (Top 0.83%) in Biweekly Contest 190.
-- Codeforces: Specialist rating 1422 (Division 2 competitor).
+- [UIDAI (Aadhaar) - Software Developer Intern](https://rachit-mangawa.github.io/#experience): Built an air-gapped multilingual document ingestion pipeline across 12 Indian languages using OpenCV, Tesseract OCR, local Ollama inference, and hybrid FAISS + BM25 retrieval with Cross-Encoder reranking. Engineered async ETL pipeline streaming 100K-row workbooks in 5–15s via SQLite WAL batch upserts across 4.2M records.
 
-## Technical Stack
+## Competitive Standings
+
+- [LeetCode Profile](https://leetcode.com/u/rachit-mangawa/): Knight rating 1987 (Top 2.84% globally); Global Rank 316 of 38,291 competitors (Top 0.83%) in Biweekly Contest 190 (All 4 solved).
+- [Codeforces Profile](https://codeforces.com/profile/i_win_again): Specialist rating 1422 (Division 2 competitor).
+
+## Technical Skills
 
 - Languages: Python, C++, TypeScript, SQL, Bash
 - Machine Learning & Vision: PyTorch, TensorFlow, Scikit-Learn, OpenCV, SHAP, NumPy, Pandas
@@ -26,11 +30,17 @@
 - Backend & Infrastructure: FastAPI, SQLite WAL, Next.js, WebSockets, SQLAlchemy, Plotly Dash
 - DevOps & Tools: Docker, Linux, Git, GitHub Actions, PyTest
 
-## Contact & Links
+## Contact & Profiles
 
 - Portfolio: https://rachit-mangawa.github.io/
+- Resume: https://rachit-mangawa.github.io/resume.pdf
 - Email: rachit.mangawa.work@gmail.com
 - GitHub: https://github.com/rachit-mangawa
 - LinkedIn: https://www.linkedin.com/in/rachit-mangawa/
 - LeetCode: https://leetcode.com/u/rachit-mangawa/
 - Codeforces: https://codeforces.com/profile/i_win_again
+- Kaggle: https://www.kaggle.com/rachitmangawa
+
+## Extended Knowledge & System Details
+
+- [Full Architectural Documentation & AEO Knowledge Graph](https://rachit-mangawa.github.io/llms-full.txt): Complete system deep dives, benchmarks, memory constraints, transpilation pipelines, and verified FAQ for Answer Engines.

@@ -1,0 +1,19 @@
+/* TEAM */
+Developer: Rachit Mangawa
+Site: https://rachit-mangawa.github.io/
+Contact: rachit.mangawa.work@gmail.com
+GitHub: https://github.com/rachit-mangawa
+LinkedIn: https://www.linkedin.com/in/rachit-mangawa/
+From: New Delhi, India
+
+/* SITE */
+Last update: 2026-11-17
+Language: English
+Doctype: HTML5
+Standards: Semantic HTML5, CSS3, Schema.org JSON-LD, WCAG 2.2 Level AA
+Components: React 19, Vite 6, Tailwind CSS 4, simple-icons, svg-scroll-draw
+Typography: Geist, Geist Mono (Google Fonts)
+AI Context: /llms.txt, /llms-small.txt, /llms-full.txt
+Security: /.well-known/security.txt
+Feed: /rss.xml
+Sitemap: /sitemap.xml

@@ -35,7 +35,11 @@ export default function Experience() {
                     <div className="p-1 rounded-md bg-(--panel) border border-(--line-2) shrink-0 flex items-center justify-center">
                       <img
                         src="/aadhaar_logo.png"
-                        alt="Aadhaar Logo"
+                        alt="Aadhaar UIDAI official emblem"
+                        width="32"
+                        height="32"
+                        loading="lazy"
+                        decoding="async"
                         className="h-7 w-7 sm:h-8 sm:w-8 object-contain rounded-xs"
                       />
                     </div>

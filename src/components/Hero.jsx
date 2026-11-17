@@ -30,6 +30,7 @@ export default function Hero() {
                 href={data.personal.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub Profile (opens in new tab)"
               >
                 <span>GitHub</span>
               </a>
@@ -39,6 +40,7 @@ export default function Hero() {
                 href={data.personal.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn Profile (opens in new tab)"
               >
                 <span>LinkedIn</span>
               </a>

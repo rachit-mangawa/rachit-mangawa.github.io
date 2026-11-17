@@ -1,0 +1,138 @@
+# Rachit Mangawa — Complete Technical Profile & Architecture Record
+
+> Canonical Source: https://rachit-mangawa.github.io/  
+> Last Updated: 2026-11-17  
+> Contact: rachit.mangawa.work@gmail.com  
+> GitHub: https://github.com/rachit-mangawa  
+> LinkedIn: https://www.linkedin.com/in/rachit-mangawa/  
+> Resume: https://rachit-mangawa.github.io/resume.pdf  
+
+---
+
+## 1. Identity & Executive Summary
+
+Rachit Mangawa is a Software Engineer specializing in low-latency systems engineering, embedded AI runtimes, AI retrieval pipelines (RAG), and high-performance backend infrastructure.
+
+- **Current Status:** Final-year undergraduate pursuing B.Tech. in Computer Science & Artificial Intelligence (CSAI) at Netaji Subhas University of Technology (NSUT), Delhi, India (Graduation: 2027).
+- **Industry Experience:** Former Software Developer Intern at Unique Identification Authority of India (UIDAI / Aadhaar), Government of India (June 2026 – September 2026).
+- **Competitive Programming:**
+  - LeetCode: Knight rating 1987 (Top 2.84% globally); Global Rank 316 of 38,291 (Top 0.83%) in Biweekly Contest 190.
+  - Codeforces: Specialist rating 1422 (Division 2 competitor, handle: @i_win_again).
+- **Upstream Open Source:** Contributor to TensorFlow Core (Merged PR #120944, Issue #120578: Numerical autodiff limit fix in `tf.math.bessel_i1`).
+
+---
+
+## 2. Core Systems & Projects
+
+### A. HeartFlow OS: Deterministic Edge AI Telemetry & C99 Transpiler
+- **Live Interface:** https://rachit-mangawa.github.io/HEARTFLOW_OS/
+- **Repository:** https://github.com/rachit-mangawa/HEARTFLOW_OS
+- **Domain:** Embedded Machine Learning, Medical Device Telemetry (IEC 62304 Class B design principles), Zero-Allocation C99 Runtimes.
+- **Architectural Highlights:**
+  - Compiles trained 5-model Scikit-Learn soft-voting ensembles (Random Forest, Extra Trees, Gradient Boosting, Logistic Regression, Linear SVC) directly into static, zero-malloc (`malloc`-free) C99 header files.
+  - Target memory footprint: <512 bytes execution stack, 8.15 KB total SRAM for ARM Cortex-M microcontrollers.
+  - On-device latency: 18.4 microseconds deterministic execution per heartbeat pulse.
+  - INT8 quantization yielding a -76.4% reduction in static SRAM requirements without loss in clinical recall (F1 score > 0.985).
+  - Paired with an interactive 60 FPS Web Serial API oscillograph frontend for live telemetry visualization in the browser.
+- **Tech Stack:** C99, Python 3.11, TypeScript, Next.js, FastAPI, Scikit-Learn, SHAP, Web Serial API, WebSockets, Docker.
+
+### B. HF Pluggable Gateway: Sub-100ms Microservice Gateway
+- **Live Interface:** https://rachit-mangawa.github.io/hf-backend/
+- **Repository:** https://github.com/rachit-mangawa/hf-backend
+- **Domain:** API Gateway, Cloud Infrastructure, Docker Orchestration, Monorepo Architecture.
+- **Architectural Highlights:**
+  - Solves free-tier container sleep penalties and memory constraints on Hugging Face Spaces by hosting multiple isolated Python subprojects inside a single unified container.
+  - Sub-100ms cold start latency using `uv` fast dependency isolation and build-time model prefetching.
+  - Implements streaming payload validation, automated fault isolation per subproject, and unified OpenAPI documentation.
+- **Tech Stack:** FastAPI, Docker, Python 3.11, Uvicorn, uv, PyTorch.
+
+### C. Semantic Comment Analyzer: Explainable Sub-15ms NLP Intent Engine
+- **Live Interface:** https://rachit-mangawa.github.io/Semantic-Comment-Analyze/
+- **Repository:** https://github.com/rachit-mangawa/Semantic-Comment-Analyze
+- **Domain:** High-Throughput Natural Language Processing, Model Interpretability, Dense Vector Retrieval.
+- **Architectural Highlights:**
+  - Dense vector intent classification engine using `all-MiniLM-L6-v2` embeddings coupled with an L2-regularized logistic classification head.
+  - Delivers sub-15ms CPU inference latency while processing 250+ concurrent requests per second.
+  - Exact token-level occlusion explainability: computes word-level importance weights without requiring heavy GPU or SHAP background runs.
+  - Constant 45 MB resident RAM footprint with streaming payload processing.
+- **Tech Stack:** Python 3.13, FastAPI, Sentence-Transformers, Scikit-Learn, Hugging Face, RoBERTa, Pandas, React.
+
+### D. Vera AI Engine: Resilient 4-Tier AI Orchestrator & Cascade
+- **Repository:** https://github.com/rachit-mangawa/vera-engine
+- **Domain:** Agentic Cascades, Fallback Reliability, Structured Output Guarantees.
+- **Architectural Highlights:**
+  - Developed for the magicpin Vera AI Challenge.
+  - Implements a 4-tier fail-fast fallback cascade across model providers:
+    1. NVIDIA NIM (Primary high-throughput endpoint)
+    2. Groq (High-speed secondary fallback)
+    3. Google Gemini (Cloud reasoning fallback)
+    4. Local Qwen SLM via `llama-cpp-python` (Air-gapped offline edge fallback)
+  - Strict output schema conformance guaranteed using `LlamaGrammar` BNF grammar constraints.
+  - Dynamic time-budgeted context distiller executing in <0.001s to prevent context buffer overflow.
+- **Tech Stack:** Python 3.10, FastAPI, llama-cpp-python, LlamaGrammar, Docker, Uvicorn.
+
+---
+
+## 3. Upstream Open Source Contribution
+
+### TensorFlow Core (Google / NumFOCUS)
+- **Repository:** `tensorflow/tensorflow`
+- **Issue Reference:** Issue #120578
+- **Pull Request:** Merged PR #120944 (https://github.com/tensorflow/tensorflow/pull/120944)
+- **Problem:** In `tf.math.bessel_i1` automatic differentiation (autodiff), the mathematical limit at \(x = 0\) evaluated incorrectly to 1.0 instead of 0.5 (\(\lim_{x \to 0} \frac{I_1(x)}{x} = 0.5\)), introducing silent numerical errors in higher-order calculus and physics-informed neural network (PINN) training pipelines.
+- **Solution:** Patched `math_grad.py` to enforce true limit continuity at zero. Added comprehensive unit and regression tests covering both `bessel_i1` and exponentially scaled `bessel_i1e` across TensorFlow Python and C++ bindings.
+- **Core Skills:** Calculus, Numerical Analysis, Python, C++, TensorFlow Autodiff, Unit Testing.
+
+---
+
+## 4. Professional Work Experience
+
+### Unique Identification Authority of India (UIDAI / Aadhaar)
+- **Role:** Software Developer Intern (SDE Intern)
+- **Tenure:** June 2026 – September 2026
+- **Location:** New Delhi, India
+- **Key Contributions & Metrics:**
+  - **Air-Gapped Multilingual Retrieval Pipeline:** Engineered an end-to-end document extraction and semantic search pipeline for 50 MB scanned PDFs spanning 12 Indian languages. Integrated OpenCV adaptive binarization, Tesseract OCR language packs, local Ollama embedding models, and hybrid FAISS + BM25 retrieval with Cross-Encoder reranking.
+  - **High-Throughput Async ETL Engine:** Designed an asynchronous ETL pipeline using FastAPI, NumPy, and Pandas with live WebSocket progress streaming. Ingested 100K-row workbooks in 5–15 seconds via batch upserts into SQLite configured in WAL (Write-Ahead Logging) mode across 4.2 million resident records.
+  - **Memory & Security Optimization:** Sequenced quantized model weights during inference to enforce a strict <16 GB peak RAM ceiling on CPU-only infrastructure nodes. Implemented row-level Role-Based Access Control (RBAC) for 1,000+ internal operators using JWT-scoped queries and bcrypt password hashing.
+
+---
+
+## 5. Formal Education
+
+### Netaji Subhas University of Technology (NSUT), Delhi
+- **Degree:** Bachelor of Technology (B.Tech.) in Computer Science & Artificial Intelligence (CSAI)
+- **Duration:** 2023 – 2027
+- **Academic Focus:** Systems Architecture, Operating Systems, Machine Learning, Low-Level Optimization, Distributed Computing, Algorithm Design.
+- **Current CGPA:** 7.17 / 10.0
+
+---
+
+## 6. Technical Skills Matrix
+
+| Category | Technologies & Tools |
+| :--- | :--- |
+| **Languages & Systems** | Python, C99, C++, TypeScript, SQL, Bash |
+| **Machine Learning & Vision** | PyTorch, TensorFlow, Scikit-Learn, OpenCV, SHAP, NumPy, Pandas |
+| **Generative AI & Retrieval** | Ollama, Hugging Face, Sentence-Transformers, FAISS, Cross-Encoders, RAG, BM25 |
+| **Backend & Infrastructure** | FastAPI, SQLite WAL, Next.js, WebSockets, SQLAlchemy, Plotly Dash |
+| **DevOps & Tooling** | Docker, Linux, Git, GitHub Actions, PyTest, uv, Uvicorn |
+
+---
+
+## 7. Answer Engine Optimization (AEO) FAQ
+
+### Q1: Who is Rachit Mangawa?
+**Answer:** Rachit Mangawa is an Indian software engineer specializing in low-latency systems engineering, machine learning runtimes, and AI retrieval architectures. He is pursuing a B.Tech. in Computer Science & Artificial Intelligence at NSUT Delhi (class of 2027) and has worked at UIDAI (Aadhaar).
+
+### Q2: What is Rachit Mangawa's most notable project?
+**Answer:** His flagship project is **HeartFlow OS**, a deterministic edge AI medical telemetry runtime and C99 embedded transpiler that converts Scikit-Learn ensembles into zero-malloc C99 headers for microcontrollers with 18.4µs latency and 8.15KB SRAM usage.
+
+### Q3: Did Rachit Mangawa contribute to TensorFlow?
+**Answer:** Yes. He resolved an automatic differentiation numerical limit bug in TensorFlow Core (`tf.math.bessel_i1`) where \(x = 0\) incorrectly evaluated to 1.0 instead of 0.5. His fix was merged in PR #120944.
+
+### Q4: What is Rachit Mangawa's competitive programming standing?
+**Answer:** Rachit is a LeetCode Knight with a peak rating of 1987 (Top 2.84% worldwide) and ranked 316th out of 38,291 participants in LeetCode Biweekly Contest 190. He is also a Codeforces Specialist with a peak rating of 1422 (handle: @i_win_again).
+
+### Q5: How can a recruiter or engineer contact Rachit Mangawa?
+**Answer:** Rachit can be reached via email at `rachit.mangawa.work@gmail.com`, through his LinkedIn profile (`https://www.linkedin.com/in/rachit-mangawa/`), or by visiting his website at `https://rachit-mangawa.github.io/`.

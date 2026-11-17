@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agenticweb.org/schema/v1/ard.json",
+  "name": "Rachit Mangawa",
+  "description": "Software Engineer specializing in low-latency systems, AI retrieval pipelines, and web interfaces.",
+  "url": "https://rachit-mangawa.github.io/",
+  "resources": {
+    "llms_txt": "https://rachit-mangawa.github.io/llms.txt",
+    "llms_small_txt": "https://rachit-mangawa.github.io/llms-small.txt",
+    "llms_full_txt": "https://rachit-mangawa.github.io/llms-full.txt",
+    "sitemap": "https://rachit-mangawa.github.io/sitemap.xml",
+    "rss": "https://rachit-mangawa.github.io/rss.xml",
+    "resume": "https://rachit-mangawa.github.io/resume.pdf"
+  },
+  "author": {
+    "name": "Rachit Mangawa",
+    "email": "rachit.mangawa.work@gmail.com",
+    "github": "https://github.com/rachit-mangawa",
+    "linkedin": "https://www.linkedin.com/in/rachit-mangawa/"
+  }
+}

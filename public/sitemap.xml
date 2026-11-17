@@ -16,6 +16,30 @@
     <loc>https://rachit-mangawa.github.io/llms.txt</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rachit-mangawa.github.io/llms-small.txt</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rachit-mangawa.github.io/llms-full.txt</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://rachit-mangawa.github.io/rss.xml</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://rachit-mangawa.github.io/humans.txt</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
 </urlset>

@@ -26,6 +26,7 @@ export default function Projects() {
                         href={proj.live || proj.repo}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`${proj.title} project overview (opens in new tab)`}
                       >
                         {proj.title}
                       </a>

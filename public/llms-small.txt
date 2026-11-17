@@ -1,0 +1,27 @@
+# Rachit Mangawa
+Software Engineer · Systems, AI & Low-Latency Architecture
+Portfolio: https://rachit-mangawa.github.io/
+Contact: rachit.mangawa.work@gmail.com | GitHub: @rachit-mangawa | LinkedIn: /in/rachit-mangawa/
+
+## Summary
+Final-year CSAI undergraduate at Netaji Subhas University of Technology (NSUT), Delhi (2023-2027). Ex-Software Developer Intern at UIDAI (Aadhaar). LeetCode Knight (1987, Top 2.84%), Codeforces Specialist (1422). Upstream contributor to TensorFlow Core.
+
+## Core Projects
+- HeartFlow OS: Edge AI telemetry system & C99 transpiler. Compiles 5-model Scikit-Learn ensembles into zero-malloc C99 (<512B stack, 8.15KB SRAM) for microcontrollers. 18.4µs inference, -76.4% INT8 SRAM reduction. (C99, Python, Next.js, Web Serial)
+- HF Pluggable Gateway: Sub-100ms API aggregation gateway hosting isolated Python subprojects in Docker on Hugging Face Spaces. (FastAPI, Docker, uv, PyTorch)
+- Semantic Comment Analyzer: Sub-15ms NLP intent classification engine with token occlusion explainability & constant 45MB RAM streaming. (MiniLM-L6-v2, FastAPI, React)
+- Vera AI Engine: Resilient 4-tier AI cascade (NVIDIA NIM -> Groq -> Gemini -> Local Qwen SLM via llama-cpp-python) with <0.001s context distillation. (Python, FastAPI, LlamaGrammar)
+
+## Open Source
+- TensorFlow Core (Merged PR #120944): Autodiff numerical limit fix in tf.math.bessel_i1 at x=0 with Python/C++ unit regression tests.
+
+## Experience
+- UIDAI / Aadhaar (June-Sept 2026): Air-gapped multilingual document pipeline for 50MB PDFs (12 Indian languages) using OpenCV, Tesseract OCR, Ollama, and FAISS+BM25. Async ETL pipeline ingesting 100K rows in 5-15s into SQLite WAL across 4.2M records. Peak RAM <16GB.
+
+## Stack
+Python, C99, C++, TypeScript, PyTorch, TensorFlow, Scikit-Learn, FAISS, RAG, Ollama, FastAPI, SQLite WAL, Docker, Linux, Git.
+
+## Pointers
+- Full Documentation: https://rachit-mangawa.github.io/llms-full.txt
+- Standard Context: https://rachit-mangawa.github.io/llms.txt
+- Resume: https://rachit-mangawa.github.io/resume.pdf

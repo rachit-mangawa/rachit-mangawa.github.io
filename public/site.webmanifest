@@ -1,11 +1,19 @@
 {
-  "name": "Rachit Mangawa - Software Engineer · Systems & AI",
+  "name": "Rachit Mangawa — Software Engineer · Systems & AI",
   "short_name": "Rachit Mangawa",
   "description": "Software Engineer specializing in low-latency systems, AI retrieval pipelines, and web interfaces.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#0b0b0c",
   "theme_color": "#0b0b0c",
+  "lang": "en-US",
+  "categories": [
+    "portfolio",
+    "technology",
+    "developer"
+  ],
   "icons": [
     {
       "src": "/favicon-32x32.png",

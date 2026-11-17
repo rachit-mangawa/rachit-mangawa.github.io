@@ -6,6 +6,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import OpenSource from './components/OpenSource';
 import Achievements from './components/Achievements';
+import FAQ from './components/FAQ';
 import Connect from './components/Connect';
 import Footer from './components/Footer';
 
@@ -36,7 +37,7 @@ export default function App() {
 
           // Active section tracking
           const scrollPos = scrollY + vh * 0.35;
-          const sectionIds = ['skills', 'experience', 'projects', 'opensource', 'achievements', 'connect'];
+          const sectionIds = ['skills', 'experience', 'projects', 'opensource', 'achievements', 'faq', 'connect'];
           let currentSec = '';
           for (const sId of sectionIds) {
             const el = document.getElementById(sId);
@@ -63,17 +64,26 @@ export default function App() {
 
   return (
     <div className="home min-h-screen bg-(--bg) text-(--fg) selection:bg-(--fg) selection:text-(--bg)">
+      {/* Skip to Main Content Link for Keyboard and Screen Readers */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-100 focus:px-4 focus:py-2 focus:bg-(--panel) focus:text-(--fg) focus:border focus:border-(--accent) focus:rounded-sm focus:shadow-md font-mono text-xs"
+      >
+        Skip to main content
+      </a>
+
       {/* Top Fixed Header */}
       <Navbar scrollProgress={docProgress} activeSection={activeSection} />
 
       {/* Main Content Area */}
-      <main>
+      <main id="main-content">
         <Hero />
         <Skills />
         <Experience />
         <Projects />
         <OpenSource />
         <Achievements />
+        <FAQ />
         <Connect />
       </main>
 

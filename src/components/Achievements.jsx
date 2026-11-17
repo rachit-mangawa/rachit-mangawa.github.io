@@ -55,7 +55,7 @@ export default function Achievements() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="action-link action-link-secondary"
-                    aria-label={`${ach.platform} - ${ach.title}`}
+                    aria-label={`${ach.platform} ${ach.title}: ${ach.label} (opens in new tab)`}
                   >
                     <span>{ach.label}</span>
                   </a>

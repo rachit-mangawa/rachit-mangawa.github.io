@@ -1,17 +1,26 @@
 User-agent: *
 Allow: /
 
-# Explicitly welcome AI Answer Engines & Search Bots
+# Explicitly welcome Search & AI Answer Engines
+User-agent: Bingbot
+Allow: /
+
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: PerplexityBot
+User-agent: ClaudeBot
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
 Allow: /
 
 User-agent: Google-Extended

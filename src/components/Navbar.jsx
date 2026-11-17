@@ -23,6 +23,7 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
     { label: 'Projects', href: '#projects' },
     { label: 'Open Source', href: '#opensource' },
     { label: 'Achievements', href: '#achievements' },
+    { label: 'FAQ', href: '#faq' },
     { label: 'Connect', href: '#connect' },
   ];
 

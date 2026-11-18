@@ -42,7 +42,7 @@ export default function Experience() {
                   </div>
 
                   <div className="tb shrink-0" aria-label="Tenure Timeline">
-                    <span className="text-(--fg-3)">{exp.period}</span>
+                    <span className="text-(--fg-3)" >{exp.period}</span>
                   </div>
                 </div>
 

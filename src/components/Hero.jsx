@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../data.json';
+import { trackEvent } from '../utils/analytics';
 
 export default function Hero() {
   return (
@@ -13,15 +14,29 @@ export default function Hero() {
               <span>{data.personal.name}</span>
             </h1>
 
+            {/* Education Sub-line in Monospace */}
+            <div className="he-edu" aria-label="Education: CSE at Netaji Subhas University of Technology, 2023 to 2027">
+              <span> B.Tech Computer Science</span>
+              <span className="he-edu-sep" aria-hidden="true" style={{ color: "var(--accent)" }}>|</span>
+              <span title="Netaji Subhas University of Technology">NSUT</span>
+              <span className="he-edu-sep" aria-hidden="true" style={{ color: "var(--accent)" }}>|</span>
+              <span>2023 – 2027</span>
+            </div>
+
 
             {/* Sub-headline Tagline */}
             <p className="he-sub">
-              {data.personal.tagline}.
+              {data.personal.tagline?.replace(/\.+$/, '')}.
             </p>
+
 
             {/* Action Row: Three Clean Buttons */}
             <div className="he-cta">
-              <a className="btn btn-solid" href="#projects">
+              <a
+                className="btn btn-solid"
+                href="#projects"
+                onClick={() => trackEvent('hero_cta_click', { target: 'projects' })}
+              >
                 <span>Explore Projects</span>
                 <span aria-hidden="true">↓</span>
               </a>
@@ -32,8 +47,10 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile (opens in new tab)"
+                onClick={() => trackEvent('hero_cta_click', { target: 'github' })}
               >
                 <span>GitHub</span>
+                <span aria-hidden="true">↗</span>
               </a>
 
               <a
@@ -42,8 +59,10 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile (opens in new tab)"
+                onClick={() => trackEvent('hero_cta_click', { target: 'linkedin' })}
               >
                 <span>LinkedIn</span>
+                <span aria-hidden="true">↗</span>
               </a>
             </div>
           </div>

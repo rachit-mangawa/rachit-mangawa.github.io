@@ -17,7 +17,10 @@
       "platform": "Codeforces",
       "title": "Specialist",
       "badge": "(1422)",
-      "meta": ["Division 2 Competitor", "Peak Rating 1422"],
+      "meta": [
+        "Division 2 Competitor",
+        "Peak Rating 1422"
+      ],
       "url": "https://codeforces.com/profile/i_win_again",
       "label": "@i_win_again"
     },
@@ -27,7 +30,10 @@
       "title": "Knight",
       "badge": "(1987)",
       "highlight": "Top 2.84%",
-      "meta": ["Global Rating Percentile", "Peak Rating 1987"],
+      "meta": [
+        "Global Rating Percentile",
+        "Peak Rating 1987"
+      ],
       "url": "https://leetcode.com/u/rachit-mangawa/",
       "label": "@rachit-mangawa"
     },
@@ -37,7 +43,10 @@
       "title": "Rank 316",
       "badge": "(Biweekly 190)",
       "highlight": "Top 0.83%",
-      "meta": ["Out of 38,291 competitors", "All 4 Solved"],
+      "meta": [
+        "Out of 38,291 competitors",
+        "All 4 Solved"
+      ],
       "url": "https://leetcode.com/contest/biweekly-contest-190/",
       "label": "Contest Page"
     }

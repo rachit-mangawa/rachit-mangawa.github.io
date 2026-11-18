@@ -58,6 +58,7 @@ export default function Achievements() {
                     aria-label={`${ach.platform} ${ach.title}: ${ach.label} (opens in new tab)`}
                   >
                     <span>{ach.label}</span>
+                    <span className="action-arrow" aria-hidden="true">↗</span>
                   </a>
                 </div>
               </li>

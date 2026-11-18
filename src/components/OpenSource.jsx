@@ -20,38 +20,8 @@ export default function OpenSource() {
 
           <div className="mt-10 sm:mt-14 exp-list">
             <div className="exp-entry">
-              {/* Top Partitioned Monospace Strip (.tb) & Action Buttons */}
-              <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
-                <div className="tb" aria-label="Project and Status">
-                  <span className="text-(--accent) font-semibold tracking-wide">{os.shortProject || os.project}</span>
-                  <span className="text-(--fg-2)">{os.status || 'Merged'}</span>
-                </div>
-
-                {/* Monospace Underline Action Links: Merged PR + Issue */}
-                <div className="flex items-center gap-5">
-                  <a
-                    href={os.prUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="action-link action-link-primary"
-                    aria-label={`View Merged PR #${os.prNumber} on GitHub`}
-                  >
-                    <span>Merged PR #{os.prNumber}</span>
-                  </a>
-                  <a
-                    href={os.issueUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="action-link action-link-secondary"
-                    aria-label={`View Issue #${os.issueNumber} on GitHub`}
-                  >
-                    <span>Issue #{os.issueNumber}</span>
-                  </a>
-                </div>
-              </div>
-
               {/* Headline with TensorFlow Logo Tile */}
-              <div className="mb-4">
+              <div className="mb-2">
                 <div className="flex items-center gap-3">
                   <div className="p-1.5 rounded-md bg-(--panel) border border-(--line-2) shrink-0 flex items-center justify-center">
                     <svg
@@ -65,24 +35,61 @@ export default function OpenSource() {
                   </div>
                   <div>
                     <h3 className="text-xl sm:text-2xl font-medium text-(--fg) tracking-tight">{os.headline}</h3>
-                    <p className="text-xs font-mono text-(--fg-3) mt-1">{os.subhead}</p>
+                    <p className="text-xs font-mono text-(--fg-3) mt-1">
+                      <span className="text-(--accent) font-semibold">{os.project}</span>
+                      <span className="text-(--line-2) mx-1.5" aria-hidden="true">·</span>
+                      <span>tensorflow/tensorflow</span>
+                    </p>
                   </div>
                 </div>
               </div>
 
-              {/* Problem / Solution Table (Reference: svg-scroll-draw /docs .dc-opt) */}
+              {/* Problem / Solution Table (Matching Achievements Table Format) */}
               <ul className="os-table">
                 <li className="os-row">
-                  <span className="os-key">Problem</span>
-                  <p className="os-desc">
-                    {os.problem || "In tf.math.bessel_i1 autodiff, the mathematical limit at x=0 returned 1.0 instead of 0.5, causing silent numerical errors in calculus pipelines."}
-                  </p>
+                  <div className="os-left">
+                    <span className="os-key">Problem</span>
+                  </div>
+                  <div className="os-mid">
+                    <p className="os-desc">
+                      In <code>tf.math.bessel_i1</code> autodiff, the mathematical limit at <code>x=0</code> returned <code>1.0</code> instead of <code>0.5</code>, causing silent numerical errors in calculus pipelines.
+                    </p>
+                  </div>
+                  <div className="os-action">
+                    <a
+                      href={os.issueUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="action-link action-link-secondary"
+                      aria-label={`View Issue #${os.issueNumber} on GitHub (opens in new tab)`}
+                    >
+                      <span>#{os.issueNumber}</span>
+                      <span className="action-arrow" aria-hidden="true">↗</span>
+                    </a>
+                  </div>
                 </li>
+
                 <li className="os-row">
-                  <span className="os-key">Solution</span>
-                  <p className="os-desc">
-                    {os.solution || "Patched math_grad.py with true limit handling and added comprehensive unit regression tests covering both bessel_i1 and bessel_i1e across TensorFlow Python and C++ bindings."}
-                  </p>
+                  <div className="os-left">
+                    <span className="os-key">Solution</span>
+                  </div>
+                  <div className="os-mid">
+                    <p className="os-desc">
+                      Patched <code>math_grad.py</code> with true limit handling and added comprehensive unit regression tests covering both <code>bessel_i1</code> and <code>bessel_i1e</code> across TensorFlow Python and C++ bindings.
+                    </p>
+                  </div>
+                  <div className="os-action">
+                    <a
+                      href={os.prUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="action-link action-link-primary"
+                      aria-label={`View Merged PR #${os.prNumber} on GitHub (opens in new tab)`}
+                    >
+                      <span>#{os.prNumber}</span>
+                      <span className="action-arrow" aria-hidden="true">↗</span>
+                    </a>
+                  </div>
                 </li>
               </ul>
 

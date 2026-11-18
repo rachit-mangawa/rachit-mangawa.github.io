@@ -18,19 +18,8 @@ export default function Experience() {
           <div className="mt-10 sm:mt-14 exp-list">
             {data.experience?.map((exp, idx) => (
               <div key={idx} className="exp-entry">
-                {/* Top Partitioned Monospace Strip (.tb - 2-point system, UIDAI highlighted) */}
-                <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
-                  <div className="tb" aria-label="Organization and Role">
-                    <span className="text-(--accent) font-semibold tracking-wide">{exp.shortCompany || exp.company}</span>
-                    <span className="text-(--fg-2)">{exp.shortRole || exp.role}</span>
-                  </div>
-                  <div className="tb" aria-label="Tenure Timeline">
-                    <span className="text-(--fg-3)">{exp.period}</span>
-                  </div>
-                </div>
-
-                {/* Role Headline with Aadhaar Logo & Organization */}
-                <div className="mb-4">
+                {/* Role Headline with Aadhaar Logo, Organization & Timeline Pill */}
+                <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
                   <div className="flex items-center gap-3">
                     <div className="p-1 rounded-md bg-(--panel) border border-(--line-2) shrink-0 flex items-center justify-center">
                       <picture>
@@ -50,6 +39,10 @@ export default function Experience() {
                       <h3 className="text-xl sm:text-2xl font-medium text-(--fg) tracking-tight">{exp.role}</h3>
                       <p className="text-xs font-mono text-(--fg-3) mt-1">{exp.company}</p>
                     </div>
+                  </div>
+
+                  <div className="tb shrink-0" aria-label="Tenure Timeline">
+                    <span className="text-(--fg-3)">{exp.period}</span>
                   </div>
                 </div>
 

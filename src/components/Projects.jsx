@@ -41,6 +41,7 @@ export default function Projects() {
                         aria-label={`${proj.title} source code on GitHub`}
                       >
                         <span>Code</span>
+                        <span className="action-arrow" aria-hidden="true">↗</span>
                       </a>
                       {proj.live && (
                         <a
@@ -51,6 +52,7 @@ export default function Projects() {
                           aria-label={`${proj.title} live deployment`}
                         >
                           <span>Live</span>
+                          <span className="action-arrow" aria-hidden="true">↗</span>
                         </a>
                       )}
                     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../data.json';
+import { ArrowUpRight } from './Icons';
 
 export default function Achievements() {
   const achievements = data.achievements || [];
@@ -58,7 +59,7 @@ export default function Achievements() {
                     aria-label={`${ach.platform} ${ach.title}: ${ach.label} (opens in new tab)`}
                   >
                     <span>{ach.label}</span>
-                    <span className="action-arrow" aria-hidden="true">↗</span>
+                    <ArrowUpRight className="action-arrow" />
                   </a>
                 </div>
               </li>

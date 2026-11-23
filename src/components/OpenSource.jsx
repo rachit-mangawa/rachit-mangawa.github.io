@@ -1,6 +1,7 @@
 import React from 'react';
 import data from '../data.json';
 import { siTensorflow } from 'simple-icons';
+import { ArrowUpRight } from './Icons';
 
 export default function OpenSource() {
   const os = data.openSource;
@@ -64,7 +65,7 @@ export default function OpenSource() {
                       aria-label={`View Issue #${os.issueNumber} on GitHub (opens in new tab)`}
                     >
                       <span>#{os.issueNumber}</span>
-                      <span className="action-arrow" aria-hidden="true">↗</span>
+                      <ArrowUpRight className="action-arrow" />
                     </a>
                   </div>
                 </li>
@@ -87,7 +88,7 @@ export default function OpenSource() {
                       aria-label={`View Merged PR #${os.prNumber} on GitHub (opens in new tab)`}
                     >
                       <span>#{os.prNumber}</span>
-                      <span className="action-arrow" aria-hidden="true">↗</span>
+                      <ArrowUpRight className="action-arrow" />
                     </a>
                   </div>
                 </li>

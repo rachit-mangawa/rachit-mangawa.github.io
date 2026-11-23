@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../data.json';
+import { ArrowUpRight } from './Icons';
 
 export default function Projects() {
   return (
@@ -41,7 +42,7 @@ export default function Projects() {
                         aria-label={`${proj.title} source code on GitHub`}
                       >
                         <span>Code</span>
-                        <span className="action-arrow" aria-hidden="true">↗</span>
+                        <ArrowUpRight className="action-arrow" />
                       </a>
                       {proj.live && (
                         <a
@@ -52,7 +53,7 @@ export default function Projects() {
                           aria-label={`${proj.title} live deployment`}
                         >
                           <span>Live</span>
-                          <span className="action-arrow" aria-hidden="true">↗</span>
+                          <ArrowUpRight className="action-arrow" />
                         </a>
                       )}
                     </div>

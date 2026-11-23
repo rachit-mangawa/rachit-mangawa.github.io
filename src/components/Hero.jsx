@@ -1,6 +1,7 @@
 import React from 'react';
 import data from '../data.json';
 import { trackEvent } from '../utils/analytics';
+import { ArrowUpRight, ArrowDown } from './Icons';
 
 export default function Hero() {
   return (
@@ -9,26 +10,26 @@ export default function Hero() {
         <div className="he-in">
           <div className="he-copy">
 
-            {/* Main Headline: Rachit Mangawa */}
-            <h1 className="he-title">
-              <span>{data.personal.name}</span>
-            </h1>
+            {/* Typography Row */}
+            <div className="hero-title_row">
+              <div className="hero-title_group">
+                <h1 className="hero-title_accent hero-title_top">Rachit</h1>
+                <div className="hero-blurb hero-blurb_left">
+                  <span>LeetCode - Knight (1987)</span>
+                  <span>Codeforces - Specialist (1422)</span>
+                  <span>B.Tech, CSE, 2023 - 2027</span>
+                </div>
+              </div>
 
-            {/* Education Sub-line in Monospace */}
-            <div className="he-edu" aria-label="Education: CSE at Netaji Subhas University of Technology, 2023 to 2027">
-              <span> B.Tech Computer Science</span>
-              <span className="he-edu-sep" aria-hidden="true" style={{ color: "var(--accent)" }}>|</span>
-              <span title="Netaji Subhas University of Technology">NSUT</span>
-              <span className="he-edu-sep" aria-hidden="true" style={{ color: "var(--accent)" }}>|</span>
-              <span>2023 – 2027</span>
+              <div className="hero-title_bottom">
+                <div className="hero-blurb hero-blurb_right">
+                  <span>LOW-LATENCY SYSTEMS</span>
+                  <span>ML &amp; AI PIPELINES</span>
+                  <span>WEB ENGINEERING</span>
+                </div>
+                <h1 className="hero-title_accent">Mangawa</h1>
+              </div>
             </div>
-
-
-            {/* Sub-headline Tagline */}
-            <p className="he-sub">
-              {data.personal.tagline?.replace(/\.+$/, '')}.
-            </p>
-
 
             {/* Action Row: Three Clean Buttons */}
             <div className="he-cta">
@@ -38,7 +39,7 @@ export default function Hero() {
                 onClick={() => trackEvent('hero_cta_click', { target: 'projects' })}
               >
                 <span>Explore Projects</span>
-                <span aria-hidden="true">↓</span>
+                <ArrowDown className="btn-arrow w-2.5 h-2.5" />
               </a>
 
               <a
@@ -50,7 +51,7 @@ export default function Hero() {
                 onClick={() => trackEvent('hero_cta_click', { target: 'github' })}
               >
                 <span>GitHub</span>
-                <span aria-hidden="true">↗</span>
+                <ArrowUpRight className="btn-arrow w-2.5 h-2.5" />
               </a>
 
               <a
@@ -62,7 +63,7 @@ export default function Hero() {
                 onClick={() => trackEvent('hero_cta_click', { target: 'linkedin' })}
               >
                 <span>LinkedIn</span>
-                <span aria-hidden="true">↗</span>
+                <ArrowUpRight className="btn-arrow w-2.5 h-2.5" />
               </a>
             </div>
           </div>

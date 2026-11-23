@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../data.json';
+import { ArrowUp } from './Icons';
 
 export default function Footer() {
   return (
@@ -71,11 +72,11 @@ export default function Footer() {
       <div className="shrink-0">
         <a
           href="#top"
-          className="hover:text-(--fg) transition-colors inline-flex items-center gap-1.5 min-h-9 py-1"
+          className="hover:text-(--fg) transition-colors inline-flex items-center gap-1.5 min-h-9 py-1 footer-top-link"
           aria-label="Back to top of page"
         >
           <span>Top</span>
-          <span aria-hidden="true">↑</span>
+          <ArrowUp className="footer-top-arrow w-2.5 h-2.5" />
         </a>
       </div>
     </footer>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import data from '../data.json';
 import { useTheme } from '../hooks/useTheme';
 import { trackEvent } from '../utils/analytics';
+import { ArrowUpRight } from './Icons';
 
 export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
   const { isDark, toggleTheme } = useTheme();
@@ -218,6 +219,24 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
                 );
               })}
             </nav>
+
+            {/* Mobile Drawer Action: Resume CTA */}
+            <div className="pt-6 mt-auto border-t border-(--line) flex flex-col gap-3">
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  trackEvent('resume_download', { location: 'mobile_drawer' });
+                  setMobileMenuOpen(false);
+                }}
+                className="btn btn-solid w-full flex items-center justify-center gap-1.5"
+                aria-label="View Resume (PDF)"
+              >
+                <span>View Resume</span>
+                <ArrowUpRight className="btn-arrow w-2.5 h-2.5" />
+              </a>
+            </div>
           </aside>
         </>
       )}

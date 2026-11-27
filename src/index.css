@@ -812,34 +812,24 @@ html.dark .nav-logo-light,
   font-family: var(--mono);
   font-weight: 400;
   letter-spacing: 0;
-  color: var(--fg-3);
+  color: var(--fg-2);
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px 24px;
   margin-top: auto;
   font-size: 11px;
   display: flex;
+  cursor: default;
   animation: hero-fade-up 450ms cubic-bezier(0.23, 1, 0.32, 1) 0.80s both;
   will-change: transform, opacity;
 }
 
 .he-foot-k,
 .he-foot-a {
-  color: inherit;
+  color: var(--fg-2);
   text-decoration: none;
-  transition: color 0.2s, transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
-  cursor: pointer;
+  cursor: default;
   user-select: none;
-}
-
-.he-foot-k:hover,
-.he-foot-a:hover {
-  color: var(--accent);
-}
-
-.he-foot-k:active,
-.he-foot-a:active {
-  transform: scale(0.92);
 }
 
 /* -------------------------------------------------------------------------- */

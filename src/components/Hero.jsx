@@ -14,7 +14,7 @@ export default function Hero() {
             <div className="hero-title_row">
               <div className="hero-title_group">
                 <h1 className="hero-title_accent hero-title_top hero-animate-in hero-entrance-1">Rachit</h1>
-                <div className="hero-blurb hero-blurb_left hero-animate-in hero-entrance-2">
+                <div className="hero-blurb hero-blurb_left">
                   <span>LeetCode - Knight (1987)</span>
                   <span>Codeforces - Specialist (1422)</span>
                   <span>B.Tech, CSE, 2023 - 2027</span>
@@ -22,17 +22,17 @@ export default function Hero() {
               </div>
 
               <div className="hero-title_bottom">
-                <div className="hero-blurb hero-blurb_right hero-animate-in hero-entrance-3">
+                <div className="hero-blurb hero-blurb_right">
                   <span>LOW-LATENCY SYSTEMS</span>
                   <span>ML &amp; AI PIPELINES</span>
                   <span>WEB ENGINEERING</span>
                 </div>
-                <h1 className="hero-title_accent hero-animate-in hero-entrance-4">Mangawa</h1>
+                <h1 className="hero-title_accent hero-animate-in hero-entrance-1">Mangawa</h1>
               </div>
             </div>
 
             {/* Action Row: Three Clean Buttons */}
-            <div className="he-cta hero-animate-in hero-entrance-5">
+            <div className="he-cta">
               <a
                 className="btn btn-solid"
                 href="#projects"
@@ -70,7 +70,7 @@ export default function Hero() {
         </div>
 
         {/* Section Footer: Core Skills */}
-        <div className="he-foot hero-animate-in hero-entrance-6" aria-label="Core Skills">
+        <div className="he-foot" aria-label="Core Skills">
           <span className="he-foot-a">Python</span>
           <span className="he-foot-a">C++</span>
           <span className="he-foot-a">TypeScript</span>

@@ -4,7 +4,7 @@ import { useTheme } from '../hooks/useTheme';
 import { trackEvent } from '../utils/analytics';
 import { ArrowUpRight } from './Icons';
 
-export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
+export default function Navbar({ scrollProgress = 0, activeSection = '', isVisible = true }) {
   const { isDark, toggleTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -31,7 +31,7 @@ export default function Navbar({ scrollProgress = 0, activeSection = '' }) {
   const isScrolled = scrollProgress > 0.005 || mobileMenuOpen;
 
   return (
-    <header className="nav" data-scrolled={isScrolled ? 'true' : 'false'}>
+    <header className="nav" data-scrolled={isScrolled ? 'true' : 'false'} data-hidden={!isVisible ? 'true' : 'false'}>
       {/* Top micro progress bar */}
       <div
         className="nav-progress"

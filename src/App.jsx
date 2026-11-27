@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 export default function App() {
   const [docProgress, setDocProgress] = useState(0);
   const [activeSection, setActiveSection] = useState('');
+  const [isNavVisible, setIsNavVisible] = useState(false);
 
   useEffect(() => {
     // Graceful backward compatibility for old /rachit-mangawa links
@@ -29,6 +30,32 @@ export default function App() {
         window.requestAnimationFrame(() => {
           const scrollY = window.scrollY;
           const vh = window.innerHeight;
+
+          // Hero Pinned Track Scrubbing
+          const heroTrack = document.getElementById('top');
+          if (heroTrack) {
+            const rect = heroTrack.getBoundingClientRect();
+            const totalScroll = heroTrack.offsetHeight - vh;
+            const p = totalScroll > 0 ? Math.min(1, Math.max(0, -rect.top / totalScroll)) : 1;
+
+            // Phase 1 (0.05 -> 0.40): credentials emerge
+            const blurbP = Math.min(1, Math.max(0, (p - 0.05) / 0.35));
+            // Phase 2 (0.40 -> 0.70): CTAs emerge
+            const ctaP = Math.min(1, Math.max(0, (p - 0.40) / 0.30));
+            // Phase 3 (0.70 -> 0.95): bottom skill ticker
+            const footP = Math.min(1, Math.max(0, (p - 0.70) / 0.25));
+
+            heroTrack.style.setProperty('--hero-p', p.toFixed(3));
+            heroTrack.style.setProperty('--blurb-p', blurbP.toFixed(3));
+            heroTrack.style.setProperty('--cta-p', ctaP.toFixed(3));
+            heroTrack.style.setProperty('--foot-p', footP.toFixed(3));
+
+            // Navbar appears towards the end of the hero sequence or when scrolled past hero
+            const shouldNavBeVisible = p >= 0.85 || scrollY >= totalScroll;
+            setIsNavVisible(shouldNavBeVisible);
+          } else {
+            setIsNavVisible(true);
+          }
 
           // Full document progress
           const totalHeight = document.documentElement.scrollHeight - vh;
@@ -86,7 +113,7 @@ export default function App() {
       </a>
 
       {/* Top Fixed Header */}
-      <Navbar scrollProgress={docProgress} activeSection={activeSection} />
+      <Navbar scrollProgress={docProgress} activeSection={activeSection} isVisible={isNavVisible} />
 
       {/* Main Content Area */}
       <main id="main-content">

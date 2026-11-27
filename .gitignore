@@ -51,6 +51,7 @@ PRODUCT.md
 plan.md
 scratch/
 .playwright-mcp/
+docs/
 
 # Root temporary screenshots & media
 /*.png

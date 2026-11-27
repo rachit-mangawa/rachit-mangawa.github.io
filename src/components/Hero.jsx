@@ -13,7 +13,7 @@ export default function Hero() {
             {/* Typography Row */}
             <div className="hero-title_row">
               <div className="hero-title_group">
-                <h1 className="hero-title_accent hero-title_top hero-animate-in hero-entrance-1">Rachit</h1>
+                <h1 className="hero-title_accent hero-title_top hero-animate-in">Rachit</h1>
                 <div className="hero-blurb hero-blurb_left">
                   <span>LeetCode - Knight (1987)</span>
                   <span>Codeforces - Specialist (1422)</span>
@@ -27,7 +27,7 @@ export default function Hero() {
                   <span>ML &amp; AI PIPELINES</span>
                   <span>WEB ENGINEERING</span>
                 </div>
-                <h1 className="hero-title_accent hero-animate-in hero-entrance-1">Mangawa</h1>
+                <h1 className="hero-title_accent hero-animate-in">Mangawa</h1>
               </div>
             </div>
 

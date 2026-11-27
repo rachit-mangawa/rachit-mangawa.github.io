@@ -820,6 +820,57 @@ html.dark .nav-logo-light,
 }
 
 /* -------------------------------------------------------------------------- */
+/* Hero Entrance Blur & Slide Animation                                       */
+/* -------------------------------------------------------------------------- */
+@keyframes hero-entrance {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-animate-in {
+  opacity: 0;
+  animation-name: hero-entrance;
+  animation-duration: 480ms;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: forwards;
+  will-change: opacity, transform, filter;
+}
+
+.hero-entrance-1 { animation-delay: 0.05s; }
+.hero-entrance-2 { animation-delay: 0.14s; }
+.hero-entrance-3 { animation-delay: 0.22s; }
+.hero-entrance-4 { animation-delay: 0.28s; }
+.hero-entrance-5 { animation-delay: 0.38s; }
+.hero-entrance-6 { animation-delay: 0.46s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-animate-in {
+    animation-name: hero-fade !important;
+    animation-duration: 200ms !important;
+    filter: none !important;
+    transform: none !important;
+    will-change: opacity !important;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
 /* Section Layout & Reference Typography                                      */
 /* -------------------------------------------------------------------------- */
 .sec {

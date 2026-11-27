@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { scrollReveal } from 'svg-scroll-draw/reveal';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
@@ -58,7 +59,20 @@ export default function App() {
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    return () => window.removeEventListener('scroll', onScroll);
+    let revealInstance = null;
+    try {
+      revealInstance = scrollReveal('.sec-head, .exp-entry, .pj-row, .os-row, .sk-row, .ach-row', {
+        preset: 'fadeUp',
+        stagger: 0.08,
+      });
+    } catch {
+      // Graceful fallback if unsupported
+    }
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      revealInstance?.destroy?.();
+    };
   }, []);
 
   return (

@@ -6,7 +6,7 @@ export default function Experience() {
     <section id="experience" className="sec" aria-labelledby="exp-title">
       <div className="sec-head mb-0!">
         {/* Left Column: Monospace Category Coordinate */}
-        <span className="label"><b>01</b> / history</span>
+        <span className="label"><b>01</b> / experience</span>
 
         {/* Right Column: Title, Subtitle, and Experience aligned flush with left negative space */}
         <div>

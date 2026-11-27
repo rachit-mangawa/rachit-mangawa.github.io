@@ -9,7 +9,7 @@ export default function Achievements() {
     <section id="achievements" className="sec" aria-labelledby="ach-title">
       <div className="sec-head mb-0!">
         {/* Left Column: Monospace Category Coordinate */}
-        <span className="label"><b>05</b> / verification</span>
+        <span className="label"><b>05</b> / achievements</span>
 
         {/* Right Column: Title, Subtitle, and Achievements Table */}
         <div>
